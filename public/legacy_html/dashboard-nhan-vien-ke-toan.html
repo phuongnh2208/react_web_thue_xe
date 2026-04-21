@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điều Khiển Kế Toán | Kinetic Concierge</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed": "#b3ebff",
+                        "inverse-primary": "#b1c6ff",
+                        "surface-container-low": "#eff4ff",
+                        "surface-variant": "#d3e4fe",
+                        "on-secondary-container": "#6a4800",
+                        "on-tertiary-fixed": "#001f27",
+                        "on-surface-variant": "#444650",
+                        "secondary-fixed-dim": "#ffba35",
+                        "inverse-surface": "#213145",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#00232c",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f8f9ff",
+                        "on-primary-fixed": "#001946",
+                        "outline-variant": "#c4c6d1",
+                        "outline": "#747781",
+                        "tertiary-fixed-dim": "#4cd6fb",
+                        "on-secondary-fixed-variant": "#5f4100",
+                        "on-tertiary-container": "#00abce",
+                        "surface-container-highest": "#d3e4fe",
+                        "secondary": "#7e5700",
+                        "secondary-fixed": "#ffdeac",
+                        "tertiary-container": "#003a47",
+                        "on-tertiary-fixed-variant": "#004e5f",
+                        "on-surface": "#0b1c30",
+                        "secondary-container": "#feb300",
+                        "surface-container": "#e5eeff",
+                        "on-primary-fixed-variant": "#284481",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#12326e",
+                        "on-background": "#0b1c30",
+                        "on-secondary-fixed": "#281900",
+                        "surface-dim": "#cbdbf5",
+                        "surface-tint": "#425d9b",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#b1c6ff",
+                        "background": "#f8f9ff",
+                        "surface": "#f8f9ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-primary-container": "#829cdf",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#dce9ff",
+                        "primary": "#001d4e",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d9e2ff"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Plus Jakarta Sans"],
+                        body: ["Inter"],
+                        label: ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-slate-50 dark:bg-slate-950 font-['Inter'] text-sm font-medium transition-all duration-300 ease-out z-50">
+    <div class="text-lg font-extrabold text-blue-900 dark:text-white px-4 py-6">
+        Bảng Điều Khiển
+        <div class="text-[10px] uppercase tracking-[0.2em] font-medium text-slate-400 mt-1">Nhân viên kế toán</div>
+    </div>
+    <div class="flex-1 px-4 space-y-1">
+        <a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-blue-900/40 text-blue-900 dark:text-amber-400 rounded-l-full ml-4 shadow-sm shadow-blue-900/5 transition-all" href="dashboard-nhan-vien-ke-toan.html">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+            <span>Tổng quan</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:translate-x-1 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all" href="quan-ly-ke-toan-thanh-toan.html">
+            <span class="material-symbols-outlined">payments</span>
+            <span>Quản lý thanh toán</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:translate-x-1 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all" href="hoa-don-bien-lai.html">
+            <span class="material-symbols-outlined">receipt_long</span>
+            <span>Hóa đơn & Biên lai</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:translate-x-1 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all" href="bang-cham-cong-nhan-vien.html">
+            <span class="material-symbols-outlined">calendar_month</span>
+            <span>Bảng chấm công</span>
+        </a>
+    </div>
+    <div class="px-4 py-6 border-t border-slate-100 dark:border-slate-800 space-y-1">
+        <a class="flex items-center gap-3 px-4 py-2 text-slate-500 dark:text-slate-400 hover:translate-x-1 transition-all" href="#">
+            <span class="material-symbols-outlined">settings</span>
+            <span>Cài đặt</span>
+        </a>
+        <button onclick="logout()" class="w-full flex items-center gap-3 px-4 py-2 text-slate-500 dark:text-slate-400 hover:translate-x-1 transition-all">
+            <span class="material-symbols-outlined">logout</span>
+            <span>Đăng xuất</span>
+        </button>
+    </div>
+</aside>
+
+<main class="ml-64 min-h-screen">
+    <header class="w-full bg-white/80 dark:bg-blue-950/80 backdrop-blur-xl sticky top-0 z-40">
+        <div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+            <div class="flex items-center gap-4">
+                <h1 class="text-2xl font-black text-blue-900 dark:text-amber-500 italic font-headline tracking-tight">Kinetic Concierge</h1>
+                <div class="h-6 w-px bg-outline-variant/30"></div>
+                <span class="text-on-surface-variant font-medium">Quản Lý Kế Toán</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="text-right hidden sm:block">
+                        <p class="text-sm font-bold text-primary dark:text-amber-400" id="userName">Nhân viên kế toán</p>
+                        <p class="text-xs text-on-surface-variant">Quản lý tài chính</p>
+                    </div>
+                    <div class="h-10 w-10 rounded-full bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-white font-bold">
+                        <span class="material-symbols-outlined">person</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="p-8 max-w-screen-2xl mx-auto space-y-8">
+        <!-- Financial Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 bg-surface-container-low rounded-lg text-primary">
+                        <span class="material-symbols-outlined">payments</span>
+                    </div>
+                    <span class="text-tertiary font-bold text-xs bg-tertiary-fixed px-2 py-1 rounded-full">+8.2%</span>
+                </div>
+                <p class="text-on-surface-variant text-sm font-medium">Doanh thu tháng này</p>
+                <h3 class="text-2xl font-extrabold text-on-surface mt-1">2.450.000 VNĐ</h3>
+            </div>
+            <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 bg-surface-container-low rounded-lg text-primary">
+                        <span class="material-symbols-outlined">receipt_long</span>
+                    </div>
+                    <span class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">Chờ xử lý</span>
+                </div>
+                <p class="text-on-surface-variant text-sm font-medium">Hóa đơn chưa thanh toán</p>
+                <h3 class="text-2xl font-extrabold text-on-surface mt-1">1.200.000 VNĐ</h3>
+            </div>
+            <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 bg-surface-container-low rounded-lg text-primary">
+                        <span class="material-symbols-outlined">account_balance</span>
+                    </div>
+                    <span class="text-green-600 font-bold text-xs bg-green-100 px-2 py-1 rounded-full">Lợi nhuận</span>
+                </div>
+                <p class="text-on-surface-variant text-sm font-medium">Lợi nhuận ròng</p>
+                <h3 class="text-2xl font-extrabold text-on-surface mt-1">850.000 VNĐ</h3>
+            </div>
+            <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 bg-surface-container-low rounded-lg text-primary">
+                        <span class="material-symbols-outlined">trending_up</span>
+                    </div>
+                    <span class="text-tertiary font-bold text-xs bg-tertiary-fixed px-2 py-1 rounded-full">+15.3%</span>
+                </div>
+                <p class="text-on-surface-variant text-sm font-medium">Tổng doanh thu năm</p>
+                <h3 class="text-2xl font-extrabold text-on-surface mt-1">32.500.000 VNĐ</h3>
+            </div>
+        </div>
+
+        <!-- Recent Transactions -->
+        <div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10 overflow-hidden">
+            <div class="px-8 py-6 flex justify-between items-center bg-surface-container-low/30">
+                <h2 class="text-xl font-bold text-primary">Giao dịch gần đây</h2>
+                <a href="quan-ly-ke-toan-thanh-toan.html" class="text-primary font-bold text-sm hover:underline underline-offset-4">Xem tất cả</a>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="text-[10px] font-black uppercase tracking-widest text-on-surface-variant bg-surface-container-low/50">
+                            <th class="px-8 py-4">Hợp đồng</th>
+                            <th class="px-8 py-4">Khách hàng</th>
+                            <th class="px-8 py-4">Số tiền</th>
+                            <th class="px-8 py-4">Ngày giao dịch</th>
+                            <th class="px-8 py-4 text-right">Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-outline-variant/10">
+                        <tr class="hover:bg-surface-container-low/30 transition">
+                            <td class="px-8 py-4 font-medium text-on-surface">HD-2026-001245</td>
+                            <td class="px-8 py-4 text-on-surface-variant">Nguyễn Văn A</td>
+                            <td class="px-8 py-4 text-on-surface-variant">450.000 VNĐ</td>
+                            <td class="px-8 py-4 text-on-surface-variant">2026-04-20</td>
+                            <td class="px-8 py-4 text-right">
+                                <span class="text-green-600 font-bold text-xs bg-green-100 px-3 py-1 rounded-full">Đã thanh toán</span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-surface-container-low/30 transition">
+                            <td class="px-8 py-4 font-medium text-on-surface">HD-2026-001244</td>
+                            <td class="px-8 py-4 text-on-surface-variant">Trần Thị B</td>
+                            <td class="px-8 py-4 text-on-surface-variant">680.000 VNĐ</td>
+                            <td class="px-8 py-4 text-on-surface-variant">2026-04-19</td>
+                            <td class="px-8 py-4 text-right">
+                                <span class="text-amber-600 font-bold text-xs bg-amber-100 px-3 py-1 rounded-full">Chờ xử lý</span>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-surface-container-low/30 transition">
+                            <td class="px-8 py-4 font-medium text-on-surface">HD-2026-001243</td>
+                            <td class="px-8 py-4 text-on-surface-variant">Phạm Minh C</td>
+                            <td class="px-8 py-4 text-on-surface-variant">520.000 VNĐ</td>
+                            <td class="px-8 py-4 text-on-surface-variant">2026-04-18</td>
+                            <td class="px-8 py-4 text-right">
+                                <span class="text-green-600 font-bold text-xs bg-green-100 px-3 py-1 rounded-full">Đã thanh toán</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Employee Timesheet -->
+        <div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10 overflow-hidden">
+            <div class="px-8 py-6 flex justify-between items-center bg-surface-container-low/30">
+                <h2 class="text-xl font-bold text-primary">Bảng chấm công nhân viên</h2>
+                <a href="bang-cham-cong-nhan-vien.html" class="text-primary font-bold text-sm hover:underline underline-offset-4">Xem chi tiết</a>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="text-[10px] font-black uppercase tracking-widest text-on-surface-variant bg-surface-container-low/50">
+                            <th class="px-8 py-4">Nhân viên</th>
+                            <th class="px-8 py-4">Bộ phận</th>
+                            <th class="px-8 py-4">Ngày công</th>
+                            <th class="px-8 py-4">Giờ tăng ca</th>
+                            <th class="px-8 py-4 text-right">Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-outline-variant/10">
+                        <tr class="hover:bg-surface-container-low/30 transition">
+                            <td class="px-8 py-4 font-medium text-on-surface">Lê Quốc Bảo</td>
+                            <td class="px-8 py-4 text-on-surface-variant">Bảo dưỡng</td>
+                            <td class="px-8 py-4 text-on-surface-variant">24/26</td>
+                            <td class="px-8 py-4 text-on-surface-variant">06 giờ</td>
+                            <td class="px-8 py-4 text-right"><span class="text-green-600 font-bold text-xs bg-green-100 px-3 py-1 rounded-full">Đã chốt</span></td>
+                        </tr>
+                        <tr class="hover:bg-surface-container-low/30 transition">
+                            <td class="px-8 py-4 font-medium text-on-surface">Ngô Thu Trang</td>
+                            <td class="px-8 py-4 text-on-surface-variant">Kế toán</td>
+                            <td class="px-8 py-4 text-on-surface-variant">25/26</td>
+                            <td class="px-8 py-4 text-on-surface-variant">02 giờ</td>
+                            <td class="px-8 py-4 text-right"><span class="text-amber-600 font-bold text-xs bg-amber-100 px-3 py-1 rounded-full">Chờ duyệt</span></td>
+                        </tr>
+                        <tr class="hover:bg-surface-container-low/30 transition">
+                            <td class="px-8 py-4 font-medium text-on-surface">Trần Minh Khôi</td>
+                            <td class="px-8 py-4 text-on-surface-variant">Cho thuê xe</td>
+                            <td class="px-8 py-4 text-on-surface-variant">23/26</td>
+                            <td class="px-8 py-4 text-on-surface-variant">04 giờ</td>
+                            <td class="px-8 py-4 text-right"><span class="text-green-600 font-bold text-xs bg-green-100 px-3 py-1 rounded-full">Đã chốt</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    // Check if user is logged in and has correct role
+    window.addEventListener('load', function() {
+        const loggedIn = localStorage.getItem('kc_user_logged_in');
+        const userType = localStorage.getItem('kc_user_type');
+        
+        if (loggedIn !== 'true') {
+            window.location.href = 'login.html';
+            return;
+        }
+        
+        if (userType !== 'nvkt') {
+            alert('Bạn không có quyền truy cập trang này');
+            window.location.href = 'login.html';
+            return;
+        }
+        
+        // Load user info
+        const userName = localStorage.getItem('kc_user_name');
+        if (userName) {
+            document.getElementById('userName').textContent = userName;
+        }
+    });
+
+    function logout() {
+        localStorage.removeItem('kc_user_logged_in');
+        localStorage.removeItem('kc_user_username');
+        localStorage.removeItem('kc_user_role');
+        localStorage.removeItem('kc_user_name');
+        localStorage.removeItem('kc_user_title');
+        localStorage.removeItem('kc_user_type');
+        window.location.href = 'login.html';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#b3ebff",
+                        "inverse-primary": "#b1c6ff",
+                        "surface-container-low": "#eff4ff",
+                        "surface-variant": "#d3e4fe",
+                        "on-secondary-container": "#6a4800",
+                        "on-tertiary-fixed": "#001f27",
+                        "on-surface-variant": "#444650",
+                        "secondary-fixed-dim": "#ffba35",
+                        "inverse-surface": "#213145",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#00232c",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f8f9ff",
+                        "on-primary-fixed": "#001946",
+                        "outline-variant": "#c4c6d1",
+                        "outline": "#747781",
+                        "tertiary-fixed-dim": "#4cd6fb",
+                        "on-secondary-fixed-variant": "#5f4100",
+                        "on-tertiary-container": "#00abce",
+                        "surface-container-highest": "#d3e4fe",
+                        "secondary": "#7e5700",
+                        "secondary-fixed": "#ffdeac",
+                        "tertiary-container": "#003a47",
+                        "on-tertiary-fixed-variant": "#004e5f",
+                        "on-surface": "#0b1c30",
+                        "secondary-container": "#feb300",
+                        "surface-container": "#e5eeff",
+                        "on-primary-fixed-variant": "#284481",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#12326e",
+                        "on-background": "#0b1c30",
+                        "on-secondary-fixed": "#281900",
+                        "surface-dim": "#cbdbf5",
+                        "surface-tint": "#425d9b",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#b1c6ff",
+                        "background": "#f8f9ff",
+                        "surface": "#f8f9ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-primary-container": "#829cdf",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#dce9ff",
+                        "primary": "#001d4e",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d9e2ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .metallic-gradient {
+            background: linear-gradient(135deg, #001d4e 0%, #12326e 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Điều hướng trên cùng -->
+<header class="w-full sticky top-0 z-50 bg-white/80 dark:bg-blue-950/80 backdrop-blur-xl shadow-sm shadow-blue-900/5">
+<nav class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto font-['Plus_Jakarta_Sans'] font-bold tracking-tight">
+<a class="text-2xl font-black text-blue-900 dark:text-amber-500 italic" href="trang-chu-khach-hang.html">Kinetic Concierge</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-blue-900 dark:text-amber-400 border-b-2 border-amber-500 pb-1" href="danh-sach-xe.html">Đội xe</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 hover:bg-blue-50/50 dark:hover:bg-blue-800/30 transition-all" href="dich-vu.html">Dịch vụ</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 hover:bg-blue-50/50 dark:hover:bg-blue-800/30 transition-all" href="dia-diem.html">Địa điểm</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 hover:bg-blue-50/50 dark:hover:bg-blue-800/30 transition-all" href="ho-tro.html">Hỗ trợ</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="p-2 rounded-full hover:bg-blue-50/50 transition-all material-symbols-outlined text-primary inline-flex items-center justify-center" href="danh-sach-xe.html">search</a>
+<a class="px-6 py-2 bg-primary text-on-primary rounded-full font-bold scale-95 duration-200 ease-in-out hover:opacity-90 inline-flex items-center justify-center" href="dashboard-tong-quan-admin.html">Đăng nhập</a>
+</div>
+</nav>
+</header>
+<main class="max-w-screen-2xl mx-auto px-8 py-12">
+<!-- Breadcrumb & Trạng thái -->
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+<div class="flex items-center gap-2 text-on-surface-variant font-medium">
+<span>Đội xe</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span>Xe tay ga</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary font-bold">Honda Air Blade</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-4 py-1.5 bg-tertiary-container text-on-tertiary-container rounded-full text-xs font-bold uppercase tracking-wider">Còn xe</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9</span>
+<span class="text-on-surface-variant font-normal">(128 đánh giá)</span>
+</div>
+</div>
+</div>
+<!-- Bộ sưu tập ảnh Bento -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-16 h-[500px] md:h-[700px]">
+<div class="md:col-span-8 relative overflow-hidden rounded-xl group">
+<img alt="Honda Air Blade 160" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbkE6kENBMbIfhE1WF3N_-jyYEqo4gmCk-RLPXWQ5AKWTCk_6hBNXtKNYzrDAbG41oCkY0LEW70rmHdRFXynEoe-1aUH62z5zstyQ3IyjOUNbFF6gxPK4bmmUCg250aAteOhklt8dLmGsHfnZ8-IuYp3PGol9U3uoyGTgh-wJJoQTJGCaq2fPk6iDg105HMvApi351ohDg0HS48BPg3BsfZUFCiwWvlqiRxh8Dd7zYEA2t6tywSzl01DKf8EVzjciXAdC6LQqg7_E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</div>
+<div class="md:col-span-4 grid grid-rows-2 gap-6">
+<div class="relative overflow-hidden rounded-xl group">
+<img alt="Cận cảnh mặt đồng hồ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5m-wg47eHlxodPZCJAPcvZMX4eGbiTJ12cdkIVI-sz6LNe9gW7k3W1jOkkL6UcfP6-sZdlgQ0UBdTO-Aq4HE3wFWvij31baJ_TPNaU3qJxbuhufbYMbesZRSrmu1Q4FjuOt44pLcTVSJrEOnCGRK3BTKQINC9Kjp6kVhU59KVdfJF7Jl501cuo_CqLnZuQj7nFuMlZms810cZd1QzwtyPYPxXXfGNUU91a8YhnqrSXAQ0SiINZlYoiBLgMGWoI2JpBw3OWNzvzeA"/>
+</div>
+<div class="relative overflow-hidden rounded-xl group">
+<img alt="Chi tiết bánh xe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxmnm_cQ9ry7BEt9Pr6_9puKJG6zvmfljYiAnQ1nP8yHXRgKSVtrNPpAlVtyqLN9Pr0hFmO1FSjIxRaPiR9I5qV7qKdeTe9MrPDXOrpffAq5_DFo9kJ3m6d225Q-G5Km_TcpyKjESY0Kft2FkkG0w8_6oTADYzvwT0fjwD6qocAf1im2PgeE8qgEQlly8UsWQdDJJ3FRNEibO7oXBe1gTZff85tYfaceoSRk2H03qV_CW_UsxWatQk-4RGnVoLX6AZl7UgcEoJjJw"/>
+</div>
+</div>
+</div>
+<!-- Khung nội dung -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+<!-- Trái: Mô tả & Thông số -->
+<div class="lg:col-span-2 space-y-12">
+<section>
+<h1 class="font-headline text-5xl font-extrabold text-primary mb-6 tracking-tight">Honda Air Blade <span class="text-outline-variant font-light">Phiên bản 2024</span></h1>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-3xl">
+                    Trải nghiệm đỉnh cao của di chuyển đô thị. Honda Air Blade 160 kết hợp sự linh hoạt của một chiếc xe tay ga với linh hồn mạnh mẽ của một chiếc xe thể thao. Được thiết kế cho những chuyên gia hiện đại, xe sở hữu động cơ eSP+ mạnh mẽ và công nghệ ngắt động cơ tạm thời tinh tế, được bao bọc trong một diện mạo khí động học đầy uy lực trên mọi góc phố.
+                </p>
+</section>
+<section class="space-y-8">
+<div class="flex items-center gap-4">
+<h2 class="font-headline text-2xl font-bold text-primary">Hiệu suất Kỹ thuật</h2>
+<div class="h-px flex-1 bg-surface-container-high"></div>
+</div>
+<!-- Lưới thông số kỹ thuật -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+<div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-secondary">
+<h3 class="text-primary font-bold mb-4 flex items-center gap-2"><span class="material-symbols-outlined">settings_input_component</span> Thông số Air Blade</h3>
+<ul class="space-y-3">
+<li class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant">Động cơ</span>
+<span class="font-semibold">125cc eSP+</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant">Công suất tối đa</span>
+<span class="font-semibold">11.2 kW @ 8,000 vòng/phút</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant">Hệ thống nhiên liệu</span>
+<span class="font-semibold">Phun xăng điện tử PGM-FI</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant">Phanh</span>
+<span class="font-semibold">Phanh đĩa ABS trước</span>
+</li>
+<li class="flex justify-between">
+<span class="text-on-surface-variant">Trọng lượng</span>
+<span class="font-semibold">114 kg</span>
+</li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+<h3 class="text-on-surface-variant font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined">compare_arrows</span> So sánh: Honda Vision
+                        </h3>
+<ul class="space-y-3 opacity-80">
+<li class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant">Động cơ</span>
+<span class="font-medium">110cc eSP</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant">Công suất tối đa</span>
+<span class="font-medium">6.59 kW @ 7,500 vòng/phút</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant">Hệ thống nhiên liệu</span>
+<span class="font-medium">Phun xăng điện tử PGM-FI</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/10 pb-2">
+<span class="text-on-surface-variant">Phanh</span>
+<span class="font-medium">Hệ thống phanh kết hợp CBS</span>
+</li>
+<li class="flex justify-between">
+<span class="text-on-surface-variant">Trọng lượng</span>
+<span class="font-medium">94 kg</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Tính năng Bento -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-6 bg-surface-container-low rounded-xl text-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">usb</span>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Cổng sạc USB</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl text-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">vpn_key</span>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Khóa thông minh</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl text-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">shopping_basket</span>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Cốp xe 23.2L</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl text-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-2">speed</span>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Màn hình LCD</p>
+</div>
+</section>
+</div>
+<!-- Phải: Thẻ đặt xe -->
+<div class="lg:col-span-1">
+<div class="bg-white rounded-2xl p-8 shadow-xl shadow-primary/5 border border-outline-variant/5 lg:self-start">
+<div class="flex items-end gap-2 mb-8">
+<span class="text-4xl font-black text-primary" data-daily-rate="200000" id="daily-rate">200.000</span>
+<span class="text-on-surface-variant text-lg mb-1 font-medium">VNĐ / ngày</span>
+</div>
+<div class="space-y-4 mb-8">
+<div>
+<label class="text-xs font-bold uppercase text-on-surface-variant mb-2 block">Ngày nhận xe</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-xl py-4 px-5 font-bold text-primary focus:ring-2 focus:ring-primary/20 appearance-none" id="pickup-date" type="date"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-primary pointer-events-none">calendar_today</span>
+</div>
+</div>
+<div>
+<label class="text-xs font-bold uppercase text-on-surface-variant mb-2 block">Ngày trả xe</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-xl py-4 px-5 font-bold text-primary focus:ring-2 focus:ring-primary/20 appearance-none" id="return-date" type="date"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-primary pointer-events-none">event_available</span>
+</div>
+</div>
+</div>
+<div class="space-y-3 mb-8">
+<div class="flex justify-between text-on-surface-variant">
+<span id="rental-label">Thuê tiêu chuẩn (3 ngày)</span>
+<span class="font-bold text-primary" id="rental-amount">600.000 VNĐ</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Phí bảo hiểm đường dài</span>
+<span class="font-bold text-primary" id="insurance-amount">50.000 VNĐ</span>
+</div>
+<div class="h-px bg-surface-container mt-4"></div>
+<div class="flex justify-between pt-2">
+<span class="text-lg font-bold text-primary">Tổng cộng</span>
+<span class="text-lg font-black text-primary" id="total-amount">650.000 VNĐ</span>
+</div>
+<p class="text-xs text-error mt-2 hidden" id="date-error">Ngày trả xe phải sau hoặc bằng ngày nhận xe.</p>
+</div>
+<button class="w-full bg-secondary-container text-on-secondary-container py-5 rounded-xl font-headline font-black text-lg uppercase tracking-wider shadow-lg shadow-secondary/20 hover:-translate-y-1 transition-transform metallic-gradient text-white disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none" id="book-now-btn" type="button">
+                    Đặt ngay
+                </button>
+<p class="text-center text-xs text-on-surface-variant mt-6 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">shield</span>
+                    Không phí ẩn. Xác nhận tức thì.
+                </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Chân trang -->
+<footer class="w-full py-12 px-8 bg-blue-900 dark:bg-slate-950 mt-24">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500">© 2024 Kinetic Concierge. Chuyển động chuẩn xác.</p>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500 hover:text-amber-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="trang-chu-khach-hang.html">Chính sách bảo mật</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500 hover:text-amber-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="trang-chu-khach-hang.html">Điều khoản dịch vụ</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500 hover:text-amber-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="quan-ly-hop-dong-cho-ky-so.html">Hợp đồng thuê xe</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500 hover:text-amber-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="trang-chu-khach-hang.html">Liên hệ</a>
+</div>
+</div>
+</footer>
+<script>
+        (function () {
+            const MS_PER_DAY = 24 * 60 * 60 * 1000;
+            const INSURANCE_FEE = 50000;
+
+            const dailyRateEl = document.getElementById('daily-rate');
+            const pickupInput = document.getElementById('pickup-date');
+            const returnInput = document.getElementById('return-date');
+            const rentalLabelEl = document.getElementById('rental-label');
+            const rentalAmountEl = document.getElementById('rental-amount');
+            const insuranceAmountEl = document.getElementById('insurance-amount');
+            const totalAmountEl = document.getElementById('total-amount');
+            const errorEl = document.getElementById('date-error');
+            const bookBtn = document.getElementById('book-now-btn');
+
+            const dailyRate = Number(dailyRateEl.dataset.dailyRate || '0');
+
+            const formatVnd = (amount) => `${new Intl.NumberFormat('vi-VN').format(amount)} VNĐ`;
+            const toIsoDate = (date) => date.toISOString().split('T')[0];
+
+            const parseDate = (value) => {
+                if (!value) return null;
+                const [year, month, day] = value.split('-').map(Number);
+                return new Date(year, month - 1, day);
+            };
+
+            const getRentalDays = (startDate, endDate) => {
+                const days = Math.round((endDate - startDate) / MS_PER_DAY);
+                return Math.max(1, days);
+            };
+
+            const setDefaultDates = () => {
+                const today = new Date();
+                const defaultReturn = new Date(today);
+                defaultReturn.setDate(defaultReturn.getDate() + 3);
+                pickupInput.value = toIsoDate(today);
+                returnInput.value = toIsoDate(defaultReturn);
+            };
+
+            const updateSummary = () => {
+                const startDate = parseDate(pickupInput.value);
+                const endDate = parseDate(returnInput.value);
+
+                if (!startDate || !endDate) {
+                    bookBtn.disabled = true;
+                    return;
+                }
+
+                returnInput.min = pickupInput.value;
+
+                if (endDate < startDate) {
+                    errorEl.classList.remove('hidden');
+                    bookBtn.disabled = true;
+                    return;
+                }
+
+                errorEl.classList.add('hidden');
+
+                const rentalDays = getRentalDays(startDate, endDate);
+                const rentalAmount = rentalDays * dailyRate;
+                const totalAmount = rentalAmount + INSURANCE_FEE;
+
+                rentalLabelEl.textContent = `Thuê tiêu chuẩn (${rentalDays} ngày)`;
+                rentalAmountEl.textContent = formatVnd(rentalAmount);
+                insuranceAmountEl.textContent = formatVnd(INSURANCE_FEE);
+                totalAmountEl.textContent = formatVnd(totalAmount);
+                bookBtn.disabled = false;
+            };
+
+            pickupInput.addEventListener('change', () => {
+                if (returnInput.value && returnInput.value < pickupInput.value) {
+                    returnInput.value = pickupInput.value;
+                }
+                updateSummary();
+            });
+
+            returnInput.addEventListener('change', updateSummary);
+
+            bookBtn.addEventListener('click', () => {
+                const query = new URLSearchParams({
+                    pickup: pickupInput.value,
+                    dropoff: returnInput.value,
+                    rate: String(dailyRate)
+                });
+                window.location.href = `thanh-toan.html?${query.toString()}`;
+            });
+
+            setDefaultDates();
+            updateSummary();
+        })();
+    </script>
+<script src="router.js"></script>
+</body></html>

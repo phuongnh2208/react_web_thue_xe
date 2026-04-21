@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dich Vu - Kinetic Concierge</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700;800&family=Public+Sans:wght@400;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-['Public_Sans'] antialiased">
+  <header class="w-full sticky top-0 z-50 bg-white/80 backdrop-blur-xl shadow-sm shadow-blue-900/5">
+    <nav class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+      <a class="text-2xl font-black text-blue-900 italic font-['Be_Vietnam_Pro'] tracking-tight" href="trang-chu-khach-hang.html">Kinetic Concierge</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a class="text-slate-600 hover:text-blue-900 font-['Be_Vietnam_Pro'] font-bold" href="danh-sach-xe.html">Đội xe</a>
+        <a class="text-blue-900 border-b-2 border-amber-500 pb-1 font-['Be_Vietnam_Pro'] font-bold" href="dich-vu.html">Dịch vụ</a>
+        <a class="text-slate-600 hover:text-blue-900 font-['Be_Vietnam_Pro'] font-bold" href="dia-diem.html">Địa điểm</a>
+        <a class="text-slate-600 hover:text-blue-900 font-['Be_Vietnam_Pro'] font-bold" href="ho-tro.html">Hỗ trợ</a>
+      </div>
+      <a class="bg-blue-900 text-white px-6 py-2.5 rounded-full font-bold inline-flex items-center" href="dashboard-tong-quan-admin.html">Đăng nhập</a>
+    </nav>
+  </header>
+
+  <main class="max-w-screen-2xl mx-auto px-8 py-14 space-y-10">
+    <section class="rounded-3xl bg-gradient-to-r from-blue-900 to-blue-700 text-white p-10">
+      <p class="text-xs uppercase tracking-[0.2em] text-amber-300 font-bold mb-4">DỊCH VỤ CAO CẤP</p>
+      <h1 class="text-4xl md:text-5xl font-['Be_Vietnam_Pro'] font-extrabold mb-4">Trải nghiệm concierge trọn gói</h1>
+      <p class="text-blue-100 max-w-2xl">Từ đặt xe, giao nhận, chăm sóc trong chuyến đi đến hỗ trợ khẩn cấp, mọi dịch vụ đều được chuẩn hóa cho trải nghiệm thuê xe cao cấp.</p>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="bg-white rounded-2xl p-6 shadow-sm">
+        <span class="material-symbols-outlined text-3xl text-blue-900">local_shipping</span>
+        <h2 class="mt-3 font-['Be_Vietnam_Pro'] text-xl font-bold text-blue-900">Giao xe tận nơi</h2>
+        <p class="mt-2 text-slate-600">Giao nhận xe tại khách sạn, sân bay hoặc văn phòng theo lịch của bạn.</p>
+      </article>
+      <article class="bg-white rounded-2xl p-6 shadow-sm">
+        <span class="material-symbols-outlined text-3xl text-blue-900">verified_user</span>
+        <h2 class="mt-3 font-['Be_Vietnam_Pro'] text-xl font-bold text-blue-900">Bảo hiểm toàn diện</h2>
+        <p class="mt-2 text-slate-600">Gói bảo hiểm mở rộng cho chuyến đi dài ngày và tuyến liên tỉnh.</p>
+      </article>
+      <article class="bg-white rounded-2xl p-6 shadow-sm">
+        <span class="material-symbols-outlined text-3xl text-blue-900">support_agent</span>
+        <h2 class="mt-3 font-['Be_Vietnam_Pro'] text-xl font-bold text-blue-900">Hỗ trợ 24/7</h2>
+        <p class="mt-2 text-slate-600">Đội ngũ concierge phản hồi tức thì khi bạn cần trợ giúp trên đường.</p>
+      </article>
+    </section>
+
+    <section class="flex flex-wrap gap-4">
+      <a class="px-6 py-3 rounded-xl bg-blue-900 text-white font-bold" href="danh-sach-xe.html">Khám phá đội xe</a>
+      <a class="px-6 py-3 rounded-xl bg-amber-400 text-blue-950 font-bold" href="chi-tiet-xe.html">Đặt xe ngay</a>
+    </section>
+  </main>
+
+  <footer class="bg-blue-900 w-full py-10 px-8">
+    <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <p class="text-xs uppercase tracking-widest text-blue-200/70">© 2024 Kinetic Concierge. Chính xác trong từng chuyển động.</p>
+      <div class="flex gap-6 text-xs uppercase tracking-widest text-blue-200/70">
+        <a href="trang-chu-khach-hang.html">Chính sách bảo mật</a>
+        <a href="trang-chu-khach-hang.html">Điều khoản dịch vụ</a>
+        <a href="quan-ly-hop-dong-cho-ky-so.html">Hợp đồng thuê xe</a>
+        <a href="ho-tro.html">Liên hệ</a>
+      </div>
+    </div>
+  </footer>
+  <script src="router.js"></script>
+</body>
+</html>

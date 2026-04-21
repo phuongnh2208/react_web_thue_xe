@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng chấm công nhân viên | Kinetic Concierge</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-slate-50 font-['Inter'] text-sm font-medium border-r border-slate-100 z-50">
+    <div class="text-lg font-extrabold text-blue-900 px-4 py-6">
+        Bảng Điều Khiển
+        <div class="text-[10px] uppercase tracking-[0.2em] font-medium text-slate-400 mt-1">Nhân viên kế toán</div>
+    </div>
+    <div class="flex-1 px-4 space-y-1">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:translate-x-1 hover:bg-blue-50 transition-all rounded-lg" href="dashboard-nhan-vien-ke-toan.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Tổng quan</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:translate-x-1 hover:bg-blue-50 transition-all rounded-lg" href="quan-ly-ke-toan-thanh-toan.html">
+            <span class="material-symbols-outlined">payments</span>
+            <span>Quản lý thanh toán</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:translate-x-1 hover:bg-blue-50 transition-all rounded-lg" href="hoa-don-bien-lai.html">
+            <span class="material-symbols-outlined">receipt_long</span>
+            <span>Hóa đơn & Biên lai</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 bg-white text-blue-900 rounded-l-full ml-4 shadow-sm shadow-blue-900/5 transition-all" href="bang-cham-cong-nhan-vien.html">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+            <span>Bảng chấm công</span>
+        </a>
+    </div>
+    <div class="px-4 py-6 border-t border-slate-100 space-y-1">
+        <a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:translate-x-1 transition-all" href="#">
+            <span class="material-symbols-outlined">settings</span>
+            <span>Cài đặt</span>
+        </a>
+        <button onclick="logout()" class="w-full flex items-center gap-3 px-4 py-2 text-slate-500 hover:translate-x-1 transition-all">
+            <span class="material-symbols-outlined">logout</span>
+            <span>Đăng xuất</span>
+        </button>
+    </div>
+</aside>
+
+<main class="ml-64 min-h-screen p-8">
+    <header class="flex items-end justify-between mb-8">
+        <div>
+            <p class="text-sm uppercase tracking-widest text-slate-500 font-semibold">Kế toán / Nhân sự</p>
+            <h1 class="text-3xl font-extrabold text-blue-900 mt-1">Bảng chấm công nhân viên</h1>
+        </div>
+        <button class="flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-900 text-white font-bold shadow-sm">
+            <span class="material-symbols-outlined">save</span>
+            Chốt bảng công
+        </button>
+    </header>
+
+    <section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div class="bg-white rounded-xl border border-slate-200 p-6">
+            <p class="text-sm text-slate-500">Tổng nhân sự</p>
+            <h3 class="text-3xl font-extrabold text-slate-900 mt-2">28</h3>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-6">
+            <p class="text-sm text-slate-500">Đã chấm công</p>
+            <h3 class="text-3xl font-extrabold text-slate-900 mt-2">24</h3>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-6">
+            <p class="text-sm text-slate-500">Nghỉ phép</p>
+            <h3 class="text-3xl font-extrabold text-slate-900 mt-2">2</h3>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-6">
+            <p class="text-sm text-slate-500">Đi muộn</p>
+            <h3 class="text-3xl font-extrabold text-slate-900 mt-2">2</h3>
+        </div>
+    </section>
+
+    <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-5 border-b border-slate-100 flex items-center justify-between">
+            <h2 class="text-xl font-bold text-blue-900">Chi tiết chấm công tháng 04/2026</h2>
+            <input class="w-80 max-w-full rounded-xl border-slate-200 focus:ring-blue-900/20" placeholder="Tìm theo tên nhân viên" type="text">
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full text-left">
+                <thead class="bg-slate-50 text-xs uppercase tracking-widest text-slate-500">
+                    <tr>
+                        <th class="px-6 py-4">Nhân viên</th>
+                        <th class="px-6 py-4">Bộ phận</th>
+                        <th class="px-6 py-4">Ngày công</th>
+                        <th class="px-6 py-4">Đi trễ</th>
+                        <th class="px-6 py-4">Tăng ca</th>
+                        <th class="px-6 py-4">Lương tạm tính</th>
+                        <th class="px-6 py-4 text-right">Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                    <tr>
+                        <td class="px-6 py-4 font-semibold">Lê Quốc Bảo</td>
+                        <td class="px-6 py-4 text-slate-600">Bảo dưỡng</td>
+                        <td class="px-6 py-4 text-slate-600">24</td>
+                        <td class="px-6 py-4 text-slate-600">1</td>
+                        <td class="px-6 py-4 text-slate-600">6 giờ</td>
+                        <td class="px-6 py-4 text-slate-600">12.400.000 VNĐ</td>
+                        <td class="px-6 py-4 text-right"><span class="text-green-700 bg-green-100 text-xs font-bold px-3 py-1 rounded-full">Đã chốt</span></td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 font-semibold">Ngô Thu Trang</td>
+                        <td class="px-6 py-4 text-slate-600">Kế toán</td>
+                        <td class="px-6 py-4 text-slate-600">25</td>
+                        <td class="px-6 py-4 text-slate-600">0</td>
+                        <td class="px-6 py-4 text-slate-600">2 giờ</td>
+                        <td class="px-6 py-4 text-slate-600">14.100.000 VNĐ</td>
+                        <td class="px-6 py-4 text-right"><span class="text-amber-700 bg-amber-100 text-xs font-bold px-3 py-1 rounded-full">Chờ duyệt</span></td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 font-semibold">Trần Minh Khôi</td>
+                        <td class="px-6 py-4 text-slate-600">Cho thuê xe</td>
+                        <td class="px-6 py-4 text-slate-600">23</td>
+                        <td class="px-6 py-4 text-slate-600">1</td>
+                        <td class="px-6 py-4 text-slate-600">4 giờ</td>
+                        <td class="px-6 py-4 text-slate-600">11.900.000 VNĐ</td>
+                        <td class="px-6 py-4 text-right"><span class="text-green-700 bg-green-100 text-xs font-bold px-3 py-1 rounded-full">Đã chốt</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<script>
+    window.addEventListener('load', function() {
+        const loggedIn = localStorage.getItem('kc_user_logged_in');
+        const userType = localStorage.getItem('kc_user_type');
+
+        if (loggedIn !== 'true') {
+            window.location.href = 'login.html';
+            return;
+        }
+
+        if (userType !== 'nvkt') {
+            alert('Bạn không có quyền truy cập trang này');
+            window.location.href = 'login.html';
+        }
+    });
+
+    function logout() {
+        localStorage.removeItem('kc_user_logged_in');
+        localStorage.removeItem('kc_user_username');
+        localStorage.removeItem('kc_user_role');
+        localStorage.removeItem('kc_user_name');
+        localStorage.removeItem('kc_user_title');
+        localStorage.removeItem('kc_user_type');
+        window.location.href = 'login.html';
+    }
+</script>
+</body>
+</html>

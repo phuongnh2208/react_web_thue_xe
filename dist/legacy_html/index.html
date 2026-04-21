@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kinetic Concierge - Trang Chu Khach Hang</title>
+  <style>
+    :root {
+      --bg: #f3f6ff;
+      --card: #ffffff;
+      --primary: #0a2a76;
+      --accent: #ffb300;
+      --text: #0f1f45;
+      --muted: #66708a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(160deg, #eef2ff 0%, #f8f9ff 50%, #eaf2ff 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .wrap {
+      width: min(960px, 100%);
+      background: var(--card);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(10, 42, 118, 0.12);
+      padding: 28px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+      line-height: 1.2;
+      color: var(--primary);
+    }
+    p {
+      margin: 0 0 20px;
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      border: 1px solid #e4e8f4;
+      border-radius: 14px;
+      padding: 14px;
+      color: var(--text);
+      transition: 0.2s ease;
+    }
+    a:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 10px 24px rgba(10, 42, 118, 0.1);
+    }
+    strong { color: var(--primary); }
+    .start {
+      display: inline-block;
+      margin-top: 18px;
+      background: var(--accent);
+      color: #1a1a1a;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 12px 18px;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Dang chuyen huong sang trang chu...</h1>
+    <p>Neu khong tu dong chuyen huong, vui long doi mot chut.</p>
+    <a class="start" href="trang-chu-khach-hang.html">Mo trang chu khach hang</a>
+  </main>
+  <script>
+    window.location.replace('trang-chu-khach-hang.html');
+  </script>
+<script src="router.js"></script>
+</body>
+</html>

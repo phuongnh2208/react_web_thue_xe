@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hóa đơn & Biên lai | Kinetic Concierge</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-slate-50 font-['Inter'] text-sm font-medium border-r border-slate-100 z-50">
+    <div class="text-lg font-extrabold text-blue-900 px-4 py-6">
+        Bảng Điều Khiển
+        <div class="text-[10px] uppercase tracking-[0.2em] font-medium text-slate-400 mt-1">Nhân viên kế toán</div>
+    </div>
+    <div class="flex-1 px-4 space-y-1">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:translate-x-1 hover:bg-blue-50 transition-all rounded-lg" href="dashboard-nhan-vien-ke-toan.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span>Tổng quan</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:translate-x-1 hover:bg-blue-50 transition-all rounded-lg" href="quan-ly-ke-toan-thanh-toan.html">
+            <span class="material-symbols-outlined">payments</span>
+            <span>Quản lý thanh toán</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 bg-white text-blue-900 rounded-l-full ml-4 shadow-sm shadow-blue-900/5 transition-all" href="hoa-don-bien-lai.html">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">receipt_long</span>
+            <span>Hóa đơn & Biên lai</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:translate-x-1 hover:bg-blue-50 transition-all rounded-lg" href="bang-cham-cong-nhan-vien.html">
+            <span class="material-symbols-outlined">calendar_month</span>
+            <span>Bảng chấm công</span>
+        </a>
+    </div>
+    <div class="px-4 py-6 border-t border-slate-100 space-y-1">
+        <a class="flex items-center gap-3 px-4 py-2 text-slate-500 hover:translate-x-1 transition-all" href="#">
+            <span class="material-symbols-outlined">settings</span>
+            <span>Cài đặt</span>
+        </a>
+        <button onclick="logout()" class="w-full flex items-center gap-3 px-4 py-2 text-slate-500 hover:translate-x-1 transition-all">
+            <span class="material-symbols-outlined">logout</span>
+            <span>Đăng xuất</span>
+        </button>
+    </div>
+</aside>
+
+<main class="ml-64 min-h-screen p-8">
+    <header class="flex items-end justify-between mb-8">
+        <div>
+            <p class="text-sm uppercase tracking-widest text-slate-500 font-semibold">Kế toán / Chứng từ</p>
+            <h1 class="text-3xl font-extrabold text-blue-900 mt-1">Hóa đơn & Biên lai</h1>
+        </div>
+        <button class="flex items-center gap-2 px-5 py-3 rounded-xl bg-amber-400 text-amber-950 font-bold shadow-sm">
+            <span class="material-symbols-outlined">add_circle</span>
+            Tạo hóa đơn mới
+        </button>
+    </header>
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white rounded-xl border border-slate-200 p-6">
+            <p class="text-sm text-slate-500">Số hóa đơn tháng này</p>
+            <h3 class="text-3xl font-extrabold text-slate-900 mt-2">124</h3>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-6">
+            <p class="text-sm text-slate-500">Biên lai đã phát hành</p>
+            <h3 class="text-3xl font-extrabold text-slate-900 mt-2">117</h3>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-6">
+            <p class="text-sm text-slate-500">Chờ xác nhận</p>
+            <h3 class="text-3xl font-extrabold text-slate-900 mt-2">7</h3>
+        </div>
+    </section>
+
+    <section class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-6 py-5 border-b border-slate-100 flex items-center justify-between">
+            <h2 class="text-xl font-bold text-blue-900">Danh sách chứng từ</h2>
+            <input class="w-80 max-w-full rounded-xl border-slate-200 focus:ring-blue-900/20" placeholder="Tìm mã hóa đơn hoặc khách hàng" type="text">
+        </div>
+        <div class="overflow-x-auto">
+            <table class="w-full text-left">
+                <thead class="bg-slate-50 text-xs uppercase tracking-widest text-slate-500">
+                    <tr>
+                        <th class="px-6 py-4">Mã chứng từ</th>
+                        <th class="px-6 py-4">Khách hàng</th>
+                        <th class="px-6 py-4">Loại</th>
+                        <th class="px-6 py-4">Ngày lập</th>
+                        <th class="px-6 py-4">Số tiền</th>
+                        <th class="px-6 py-4 text-right">Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                    <tr>
+                        <td class="px-6 py-4 font-semibold">INV-2026-0412</td>
+                        <td class="px-6 py-4 text-slate-600">Nguyễn Văn A</td>
+                        <td class="px-6 py-4 text-slate-600">Hóa đơn</td>
+                        <td class="px-6 py-4 text-slate-600">2026-04-21</td>
+                        <td class="px-6 py-4 text-slate-600">450.000 VNĐ</td>
+                        <td class="px-6 py-4 text-right"><span class="text-green-700 bg-green-100 text-xs font-bold px-3 py-1 rounded-full">Đã gửi</span></td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 font-semibold">RCPT-2026-0308</td>
+                        <td class="px-6 py-4 text-slate-600">Trần Thị B</td>
+                        <td class="px-6 py-4 text-slate-600">Biên lai</td>
+                        <td class="px-6 py-4 text-slate-600">2026-04-20</td>
+                        <td class="px-6 py-4 text-slate-600">680.000 VNĐ</td>
+                        <td class="px-6 py-4 text-right"><span class="text-amber-700 bg-amber-100 text-xs font-bold px-3 py-1 rounded-full">Chờ duyệt</span></td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 font-semibold">INV-2026-0399</td>
+                        <td class="px-6 py-4 text-slate-600">Phạm Minh C</td>
+                        <td class="px-6 py-4 text-slate-600">Hóa đơn</td>
+                        <td class="px-6 py-4 text-slate-600">2026-04-18</td>
+                        <td class="px-6 py-4 text-slate-600">520.000 VNĐ</td>
+                        <td class="px-6 py-4 text-right"><span class="text-green-700 bg-green-100 text-xs font-bold px-3 py-1 rounded-full">Đã gửi</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<script>
+    window.addEventListener('load', function() {
+        const loggedIn = localStorage.getItem('kc_user_logged_in');
+        const userType = localStorage.getItem('kc_user_type');
+
+        if (loggedIn !== 'true') {
+            window.location.href = 'login.html';
+            return;
+        }
+
+        if (userType !== 'nvkt') {
+            alert('Bạn không có quyền truy cập trang này');
+            window.location.href = 'login.html';
+        }
+    });
+
+    function logout() {
+        localStorage.removeItem('kc_user_logged_in');
+        localStorage.removeItem('kc_user_username');
+        localStorage.removeItem('kc_user_role');
+        localStorage.removeItem('kc_user_name');
+        localStorage.removeItem('kc_user_title');
+        localStorage.removeItem('kc_user_type');
+        window.location.href = 'login.html';
+    }
+</script>
+</body>
+</html>

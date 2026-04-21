@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thanh Toán Thành Công - Kinetic Concierge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;family=Dancing+Script:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .signature-font {
+            font-family: 'Dancing Script', cursive;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#b3ebff",
+                      "inverse-primary": "#b1c6ff",
+                      "surface-container-low": "#eff4ff",
+                      "surface-variant": "#d3e4fe",
+                      "on-secondary-container": "#6a4800",
+                      "on-tertiary-fixed": "#001f27",
+                      "on-surface-variant": "#444650",
+                      "secondary-fixed-dim": "#ffba35",
+                      "inverse-surface": "#213145",
+                      "on-tertiary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#00232c",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#f8f9ff",
+                      "on-primary-fixed": "#001946",
+                      "outline-variant": "#c4c6d1",
+                      "outline": "#747781",
+                      "tertiary-fixed-dim": "#4cd6fb",
+                      "on-secondary-fixed-variant": "#5f4100",
+                      "on-tertiary-container": "#00abce",
+                      "surface-container-highest": "#d3e4fe",
+                      "secondary": "#7e5700",
+                      "secondary-fixed": "#ffdeac",
+                      "tertiary-container": "#003a47",
+                      "on-tertiary-fixed-variant": "#004e5f",
+                      "on-surface": "#0b1c30",
+                      "secondary-container": "#feb300",
+                      "surface-container": "#e5eeff",
+                      "on-primary-fixed-variant": "#284481",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#12326e",
+                      "on-background": "#0b1c30",
+                      "on-secondary-fixed": "#281900",
+                      "surface-dim": "#cbdbf5",
+                      "surface-tint": "#425d9b",
+                      "error": "#ba1a1a",
+                      "primary-fixed-dim": "#b1c6ff",
+                      "background": "#f8f9ff",
+                      "surface": "#f8f9ff",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-primary-container": "#829cdf",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#dce9ff",
+                      "primary": "#001d4e",
+                      "on-error": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed": "#d9e2ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          }
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased">
+<!-- TopNavBar Suppression: Shell Visibility & Relevance Policy -->
+<main class="min-h-screen pt-8 pb-20 px-6 max-w-4xl mx-auto">
+<!-- Success Banner -->
+<section class="mb-12 text-center animate-fade-in">
+<div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-secondary-container mb-6 shadow-xl shadow-secondary/20">
+<span class="material-symbols-outlined text-4xl text-on-secondary-fixed" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h1 class="font-headline font-extrabold text-4xl md:text-5xl text-primary tracking-tight mb-4">Thanh Toán Thành Công</h1>
+<p class="text-on-surface-variant text-lg max-w-md mx-auto">Hành trình của bạn bắt đầu từ đây. Hợp đồng thuê xe của bạn đã được khởi tạo và ký điện tử.</p>
+</section>
+<!-- Rental Contract View -->
+<div class="bg-surface-container-low rounded-xl p-1 shadow-2xl shadow-primary/5">
+<section class="bg-surface-container-lowest rounded-lg overflow-hidden border-t-8 border-secondary-container">
+<div class="p-8 md:p-12">
+<!-- Contract Header -->
+<div class="flex flex-col md:flex-row justify-between items-start gap-8 mb-12">
+<div>
+<span class="text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-2 block">Số hợp đồng: KC-99284-2024</span>
+<h2 class="font-headline font-extrabold text-3xl text-primary italic">Kinetic Concierge</h2>
+</div>
+<div class="text-right">
+<p class="font-bold text-primary">Ngày phát hành</p>
+<p class="text-on-surface-variant">Ngày 24 tháng 10, 2024</p>
+</div>
+</div>
+<!-- Contract Details Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/10 mb-12">
+<div class="bg-surface-container-lowest p-6">
+<h3 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4">Thông tin khách thuê</h3>
+<p class="font-headline font-bold text-primary mb-1">Nguyễn Văn An</p>
+<p class="text-sm text-on-surface-variant">an.nguyen@executive.com.vn</p>
+<p class="text-sm text-on-surface-variant">+84 90 123 4567</p>
+</div>
+<div class="bg-surface-container-lowest p-6">
+<h3 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4">Thông tin phương tiện</h3>
+<p class="font-headline font-bold text-primary mb-1">2024 Porsche Taycan Turbo S</p>
+<p class="text-sm text-on-surface-variant">Biển số: 51K-772.88</p>
+<p class="text-sm text-on-surface-variant">Màu sắc: Xanh Frozen Blue Metallic</p>
+</div>
+<div class="bg-surface-container-lowest p-6">
+<h3 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4">Điểm đón khách</h3>
+<div class="items-start gap-3 flex">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+<div>
+<p class="font-semibold text-primary">Ga Hàng không Tư nhân Signature</p>
+<p class="text-sm text-on-surface-variant">Sân bay Tân Sơn Nhất, TP. HCM</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6">
+<h3 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4">Thời hạn thuê</h3>
+<div class="flex items-center gap-4">
+<div>
+<p class="text-xs text-on-surface-variant">Bắt đầu</p>
+<p class="font-semibold text-primary">24 Th10</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="east">east</span>
+<div>
+<p class="text-xs text-on-surface-variant">Kết thúc</p>
+<p class="font-semibold text-primary">27 Th10</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Contract Text Overlay -->
+<div class="prose prose-sm max-w-none text-on-surface-variant mb-12 p-6 bg-surface-container-low rounded-lg leading-relaxed">
+<p class="mb-4">Hợp đồng Thuê xe Master ("Hợp đồng") này được giao kết giữa Kinetic Concierge ("Công ty") và Khách thuê được nêu chi tiết ở trên. Khách thuê xác nhận đã nhận xe trong tình trạng tốt và đồng ý với các điều khoản và điều kiện đã đề ra, bao gồm phạm vi bảo hiểm, chính sách nhiên liệu và trách nhiệm bồi thường thiệt hại.</p>
+<p>Kinetic Concierge cam kết phương tiện được bảo dưỡng theo tiêu chuẩn chính xác nhất. Khách thuê đồng ý chỉ vận hành xe trong phạm vi địa lý được cho phép và tuân thủ mọi luật giao thông địa phương.</p>
+</div>
+<!-- Digital Signature UI -->
+<div class="flex flex-col md:flex-row justify-between items-end gap-8 pt-8">
+<div class="w-full md:w-auto">
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-4">Chữ ký xác thực</p>
+<div class="relative group">
+<div class="h-32 w-full md:w-80 bg-surface-container-low rounded-xl border-b-2 border-primary/20 flex items-center justify-center overflow-hidden transition-all group-hover:bg-surface-container">
+<p class="signature-font text-5xl text-primary transform -rotate-3 select-none">Nguyễn Văn An</p>
+<div class="absolute top-2 right-2 flex gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="w-2 h-2 rounded-full bg-secondary-container/50"></span>
+</div>
+</div>
+<div class="mt-2 flex justify-between items-center px-1">
+<p class="text-[10px] text-on-surface-variant font-medium">THỜI GIAN: 2024-10-24 14:22:11 GMT+7</p>
+<span class="material-symbols-outlined text-on-tertiary-container text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+<button class="flex items-center justify-center gap-2 px-8 py-4 bg-primary text-on-primary rounded-xl font-headline font-bold text-sm transition-all hover:bg-primary-container active:scale-95 shadow-lg shadow-primary/10" id="download-pdf-btn" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="download">download</span>
+                                Tải xuống PDF
+                            </button>
+<button class="flex items-center justify-center gap-2 px-8 py-4 bg-surface-container-highest text-primary rounded-xl font-headline font-bold text-sm transition-all hover:bg-surface-variant active:scale-95" id="view-history-btn" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="history">history</span>
+                                Xem Lịch sử
+                            </button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Secondary Guidance -->
+<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-6 rounded-xl transition-all hover:-translate-y-1">
+<span class="material-symbols-outlined text-secondary-container mb-4 text-3xl" data-icon="directions_car">directions_car</span>
+<h4 class="font-headline font-bold text-primary mb-2">Theo dõi xe đến</h4>
+<p class="text-sm text-on-surface-variant">Giám sát vị trí tài xế riêng của bạn theo thời gian thực.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl transition-all hover:-translate-y-1">
+<span class="material-symbols-outlined text-secondary-container mb-4 text-3xl" data-icon="support_agent">support_agent</span>
+<h4 class="font-headline font-bold text-primary mb-2">Concierge 24/7</h4>
+<p class="text-sm text-on-surface-variant">Kết nối trực tiếp với chuyên viên quản lý lịch trình cá nhân.</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl transition-all hover:-translate-y-1">
+<span class="material-symbols-outlined text-secondary-container mb-4 text-3xl" data-icon="calendar_month">calendar_month</span>
+<h4 class="font-headline font-bold text-primary mb-2">Thêm vào Lịch</h4>
+<p class="text-sm text-on-surface-variant">Đồng bộ ngày thuê xe với hành trình công tác của bạn.</p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-blue-900 dark:bg-slate-950 w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500">
+            © 2024 Kinetic Concierge. Sự Chính Xác Trong Chuyển Động.
+        </p>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500 hover:text-amber-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="trang-chu-khach-hang.html">Chính sách bảo mật</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500 hover:text-amber-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="trang-chu-khach-hang.html">Điều khoản dịch vụ</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500 hover:text-amber-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="trang-chu-khach-hang.html">Thỏa thuận thuê xe</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500 hover:text-amber-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="trang-chu-khach-hang.html">Liên hệ</a>
+</div>
+</footer>
+<!-- Decorative Elements -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none z-[-1] overflow-hidden">
+<div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute bottom-[-5%] left-[-10%] w-80 h-80 bg-secondary/5 rounded-full blur-3xl"></div>
+</div>
+<script>
+      (function () {
+        const downloadBtn = document.getElementById('download-pdf-btn');
+        if (downloadBtn) {
+          downloadBtn.addEventListener('click', function () {
+            window.print();
+          });
+        }
+
+        const historyBtn = document.getElementById('view-history-btn');
+        if (historyBtn) {
+          historyBtn.addEventListener('click', function () {
+            const role = localStorage.getItem('kc_user_role');
+            if (role !== 'staff') {
+              alert('Lịch sử hợp đồng chỉ dành cho nhân viên cửa hàng. Vui lòng đăng nhập nhân viên.');
+              window.location.href = 'dashboard-tong-quan-admin.html';
+              return;
+            }
+
+            window.location.href = 'quan-ly-hop-dong-cho-ky-so.html';
+          });
+        }
+      })();
+    </script>
+<script src="router.js"></script>
+</body></html>

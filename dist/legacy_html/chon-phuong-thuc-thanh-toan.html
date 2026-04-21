@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#b3ebff",
+                    "inverse-primary": "#b1c6ff",
+                    "surface-container-low": "#eff4ff",
+                    "surface-variant": "#d3e4fe",
+                    "on-secondary-container": "#6a4800",
+                    "on-tertiary-fixed": "#001f27",
+                    "on-surface-variant": "#444650",
+                    "secondary-fixed-dim": "#ffba35",
+                    "inverse-surface": "#213145",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#00232c",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f8f9ff",
+                    "on-primary-fixed": "#001946",
+                    "outline-variant": "#c4c6d1",
+                    "outline": "#747781",
+                    "tertiary-fixed-dim": "#4cd6fb",
+                    "on-secondary-fixed-variant": "#5f4100",
+                    "on-tertiary-container": "#00abce",
+                    "surface-container-highest": "#d3e4fe",
+                    "secondary": "#7e5700",
+                    "secondary-fixed": "#ffdeac",
+                    "tertiary-container": "#003a47",
+                    "on-tertiary-fixed-variant": "#004e5f",
+                    "on-surface": "#0b1c30",
+                    "secondary-container": "#feb300",
+                    "surface-container": "#e5eeff",
+                    "on-primary-fixed-variant": "#284481",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#12326e",
+                    "on-background": "#0b1c30",
+                    "on-secondary-fixed": "#281900",
+                    "surface-dim": "#cbdbf5",
+                    "surface-tint": "#425d9b",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#b1c6ff",
+                    "background": "#f8f9ff",
+                    "surface": "#f8f9ff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-primary-container": "#829cdf",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#dce9ff",
+                    "primary": "#001d4e",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#d9e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="w-full sticky top-0 z-50 bg-white/80 dark:bg-blue-950/80 backdrop-blur-xl shadow-sm shadow-blue-900/5">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black text-blue-900 dark:text-amber-500 italic font-headline tracking-tight">
+                Kinetic Concierge
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-headline font-bold tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 transition-all duration-200" href="trang-chu-khach-hang.html">Đội xe</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 transition-all duration-200" href="dich-vu.html">Dịch vụ</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 transition-all duration-200" href="dia-diem.html">Địa điểm</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-900 transition-all duration-200" href="ho-tro.html">Hỗ trợ</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="px-6 py-2 rounded-full font-headline font-bold text-blue-900 dark:text-blue-100 hover:bg-blue-50/50 transition-all duration-200 inline-flex items-center justify-center" href="dashboard-tong-quan-admin.html">
+                    Đăng nhập
+                </a>
+</div>
+</div>
+</nav>
+<main class="max-w-screen-xl mx-auto px-6 py-12 md:py-20">
+<!-- Header Section -->
+<header class="mb-12 text-center md:text-left">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-low text-primary font-headline text-sm font-bold mb-4">
+<span class="material-symbols-outlined text-sm">lock</span>
+                THANH TOÁN BẢO MẬT
+            </div>
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight text-primary mb-4">
+                Hoàn tất hành trình của bạn
+            </h1>
+<p class="text-on-surface-variant max-w-2xl text-lg">
+                Chọn phương thức thanh toán phù hợp nhất với nhu cầu của bạn. Yêu cầu đặt xe <span class="font-bold text-primary italic">Honda Air Blade</span> của bạn sẽ được giữ trong 15 phút.
+            </p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Payment Selection Column -->
+<div class="lg:col-span-8 space-y-6">
+<!-- Option 1: Pay Full -->
+<label class="relative block cursor-pointer group">
+<input checked="" class="peer sr-only" name="payment_plan" type="radio" value="full"/>
+<div class="p-8 bg-surface-container-lowest rounded-xl shadow-sm transition-all duration-300 border-2 border-transparent peer-checked:border-primary-container peer-checked:shadow-xl group-hover:bg-surface-container-low">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container flex-shrink-0">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-primary mb-1">Thanh toán toàn bộ</h3>
+<p class="text-on-surface-variant text-sm max-w-sm leading-relaxed">
+                                        Thanh toán đầy đủ ngay hôm nay để trải nghiệm quy trình nhận xe nhanh chóng hơn tại địa điểm của chúng tôi.
+                                    </p>
+</div>
+</div>
+<div class="text-right w-full md:w-auto">
+<div class="text-3xl font-headline font-black text-primary" id="full-amount">650.000 VNĐ</div>
+<div class="text-xs uppercase tracking-widest text-on-surface-variant mt-1">Tổng cộng đã bao gồm thuế</div>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/10 flex items-center gap-2 text-primary font-medium text-sm">
+<span class="material-symbols-outlined text-secondary text-base" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span id="reward-points">Nhận ngay 65 điểm Kinetic</span>
+</div>
+</div>
+<div class="absolute top-4 right-4 opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary-container text-3xl">check_circle</span>
+</div>
+</label>
+<!-- Option 2: Pay Deposit -->
+<label class="relative block cursor-pointer group">
+<input class="peer sr-only" name="payment_plan" type="radio" value="deposit"/>
+<div class="p-8 bg-surface-container-lowest rounded-xl shadow-sm transition-all duration-300 border-2 border-transparent peer-checked:border-primary-container peer-checked:shadow-xl group-hover:bg-surface-container-low">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div>
+<h3 class="font-headline text-xl font-bold text-primary mb-1">Đặt cọc trước (30%)</h3>
+<p class="text-on-surface-variant text-sm max-w-sm leading-relaxed">
+                                        Giữ lịch trình của bạn bằng cách thanh toán một phần. Số tiền còn lại <span class="font-bold text-primary" id="remaining-amount">455.000 VNĐ</span> sẽ được thu khi nhận xe.
+                                    </p>
+</div>
+</div>
+<div class="text-right w-full md:w-auto">
+<div class="text-3xl font-headline font-black text-primary" id="deposit-amount">195.000 VNĐ</div>
+<div class="text-xs uppercase tracking-widest text-on-surface-variant mt-1">Cần thanh toán hôm nay</div>
+</div>
+</div>
+</div>
+<div class="absolute top-4 right-4 opacity-0 peer-checked:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary-container text-3xl">check_circle</span>
+</div>
+</label>
+<!-- Payment Method Section -->
+<div class="bg-surface-container-low p-8 rounded-xl mt-12">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-headline font-bold text-lg text-primary">Phương thức thanh toán</h4>
+<div class="flex gap-2">
+<div class="h-6 w-10 bg-white rounded shadow-sm flex items-center justify-center">
+<img alt="Visa" class="h-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2kwqrLIUv6jWdBKopmY8qD7ydaSDytoSKVM2Nt9LhhziOfkPGs79_N37LjuzY5Xurm80N7EI1UgFQsU1xlN1ovpb0A0Ca8ur7BS-Y4mzrhopaNPwAfJFW-KoVT0uk9-ry0Rk400PgVORoJmWEoege9kGcd_WaM2wnYp2lL_nDGoFWr6beJLff2FTxx6X1T1wO2dHqCfVFqnSI9CZ2rtJX3CDIkG6tKKt_qZWGxXLiL4zFZXu4n3jm_qiQy2qxD6wpTGP82iVripU"/>
+</div>
+<div class="h-6 w-10 bg-white rounded shadow-sm flex items-center justify-center">
+<img alt="Mastercard" class="h-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYOSnI6SwZXmPBh0U0cS9LO0oEmBgrhZuJHMZELrDyJn3cSeUIKqqHOTnlwWARDiJlSaPXpD0z9XxeqJ37NKwUEqVHJmGRUh1v7XHu-k7LHPG5kuI9iGKwLCqWiqhkezZTc9wEhK0hAtaQKZhXp-Qmj3ReglIPdvxW7RqlteWkTSSvaXRsV1rL3KnO-8ydHzz6DwuImBE7cRokDzdwpj5rsGbf-4tDQRqIuwXqDZKfJVJeBYs5CnW3rduqaFxIEG3es_aiaUOi0eI"/>
+</div>
+<div class="h-6 w-10 bg-white rounded shadow-sm flex items-center justify-center">
+<img alt="PayPal" class="h-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt06Iw6tFBkAIUFyKBQwBu5e0IiOeAmSBwbU5WpukhWlPC50O_x-snvdslCIejoUowm6YCjGWYozrLXXO_gPdZ8VzRb2k5hncHT_ubR2c1RjbheNAEzlIDOJgfcDwVEYvEkWssHR5URKeJv--ShDiiOmMTMYD9GK7gry6s2ukBr6vFfUa1gyjzFNZD0lFo24PDYgdc4bsbjsRYqJgYJYlTpa6xccG9jngEvmmdscJ4-_HWZJ0y4t-ipzGfK1bFw6aKPFVrTXJrC8o"/>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant px-1">Số thẻ</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none rounded-lg p-3 text-primary placeholder-on-surface-variant/40 focus:ring-2 focus:ring-primary-container transition-all" placeholder="0000 0000 0000 0000" type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant/50">credit_card</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant px-1">Ngày hết hạn</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg p-3 text-primary placeholder-on-surface-variant/40 focus:ring-2 focus:ring-primary-container transition-all" placeholder="MM/YY" type="text"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant px-1">CVC/CVV</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg p-3 text-primary placeholder-on-surface-variant/40 focus:ring-2 focus:ring-primary-container transition-all" placeholder="•••" type="text"/>
+</div>
+</div>
+</div>
+<div class="mt-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-600">verified_user</span>
+<span class="text-xs text-on-surface-variant leading-tight">Thanh toán của bạn được bảo mật bằng mã hóa SSL 256-bit. Chúng tôi không bao giờ lưu trữ chi tiết thẻ của bạn.</span>
+</div>
+<button class="w-full md:w-auto px-10 py-4 bg-secondary-container text-on-secondary-fixed font-headline font-black rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:scale-95" data-router-ignore="true" id="confirm-payment-btn" type="button">
+                            XÁC NHẬN VÀ THANH TOÁN
+                        </button>
+</div>
+</div>
+</div>
+<!-- Summary Column -->
+<div class="lg:col-span-4 sticky top-28">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-6 space-y-6">
+<div class="aspect-video rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="front three-quarter view of a metallic blue luxury electric sedan parked in a sleek modern architectural garage with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7wbFH5aNqTml44Dzga5oLmBsVLw4kC-R6q6j8WcRY6Gbccbe7phphxoGlsL0VGeLg_AIMovvHK97bvqFvVXJy9DzaL0BCtqk9cyB2c6mXxODRBJt0jsh0iwJLSc5iLbGrRkcXZJzn79i1z7IgrazBOK6BEmdjcZ6fTJwA1okr01Pf3anIbx_b4wHyl96KUBO2F4YJU9vHfYNLFayPp8JDX89Wa2ohcOkDALWYaOJaiXMOsnpTjvaIm6yb8J00mcTKGrh1c9sU07E"/>
+</div>
+<div>
+<h2 class="font-headline font-extrabold text-primary text-xl">Honda Air Blade</h2>
+<p class="text-on-surface-variant text-sm">Trung tâm Miami Design District</p>
+</div>
+<div class="space-y-4 py-6 border-y border-outline-variant/10">
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant" id="aside-rental-label">Giá thuê 3 ngày</span>
+<span class="text-primary font-medium" id="aside-rental-amount">600.000 VNĐ</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Bảo hiểm đường dài</span>
+<span class="text-primary font-medium" id="aside-insurance">50.000 VNĐ</span>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div class="text-sm font-bold text-on-surface-variant uppercase tracking-widest">Tổng cộng</div>
+<div class="text-3xl font-headline font-black text-primary" id="aside-total">650.000 VNĐ</div>
+</div>
+<div class="bg-primary/5 p-4 rounded-lg flex gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">info</span>
+<p class="text-[10px] text-primary/80 leading-normal font-medium">Hủy miễn phí trước 24 giờ khi nhận xe. Khoản đặt cọc bảo đảm 2.000.000 VNĐ sẽ được phong tỏa hoặc thu tiền mặt khi nhận xe.</p>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-center gap-6 opacity-40">
+<img alt="Stripe" class="h-5 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrn_1obrxvBSjogs8-5KVH8d4rIbISxUAS8gToJT_JcmJQJai7_oMbU0kQrdOBqZtIk8rowD8fFrpkexk9mH1GYMs84Hy_iA09dTYJsR1YhHrTllNvA96Nx_XyEMN-lW96FSxKJrxCWnaZLQPPGRJD_x6KVdNhu5BUqN72wzsRbpWGKFdcZHjYZ14otiwIHp_b4PLh7cIkSIS3RvMYe_-HNyzw2OxFDUWwcDEL0Q9DKsXqfCFd2fPXqjtwbhUg9el49c6pMRGvGtM"/>
+<img alt="Apple Pay" class="h-4 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_ZDzkfY1YHVdm3bdfztOzVk1JHgRx5UKESHR3U0LOTZI49wJsmRQu6GlgGJj1qyi_Xm8OkrEvuBfR02s3nbBp8MpSl6x8ZUnE8hui9Wghzqcj3CsRHVPfMSvzi-0IgyjOO8__cS1X4UxXTci6WKMzJ8PA_bfTG6Jqofs9CPFtEw-YjUVJkTGyTRb_PwJl50uRn4KN6b_58jZOHWmBzGletL90MzyL21RYRT6rB57wFsM42yuZy8NARYL_eb8pCZ8OIzeY-40krQQ"/>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-blue-900 dark:bg-slate-950 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-screen-2xl mx-auto">
+<p class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500">
+                © 2024 Kinetic Concierge. Sự chính xác trong từng chuyển động.
+            </p>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500 hover:text-amber-400 underline underline-offset-4 transition-opacity" href="trang-chu-khach-hang.html">Chính sách bảo mật</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500 hover:text-amber-400 underline underline-offset-4 transition-opacity" href="trang-chu-khach-hang.html">Điều khoản dịch vụ</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500 hover:text-amber-400 underline underline-offset-4 transition-opacity" href="trang-chu-khach-hang.html">Thỏa thuận thuê xe</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500 hover:text-amber-400 underline underline-offset-4 transition-opacity" href="trang-chu-khach-hang.html">Liên hệ</a>
+</div>
+</div>
+</footer>
+<script>
+            (function () {
+                const INSURANCE_FEE = 50000;
+                const DEFAULT_RATE = 200000;
+                const MS_PER_DAY = 24 * 60 * 60 * 1000;
+
+                const query = new URLSearchParams(window.location.search);
+                const pickup = query.get('pickup');
+                const dropoff = query.get('dropoff');
+                const rate = Number(query.get('rate')) || DEFAULT_RATE;
+
+                const parseDate = (value) => {
+                    if (!value) return null;
+                    const [year, month, day] = value.split('-').map(Number);
+                    return new Date(year, month - 1, day);
+                };
+                const formatVnd = (amount) => `${new Intl.NumberFormat('vi-VN').format(amount)} VNĐ`;
+
+                let days = Number(query.get('days')) || 3;
+                const start = parseDate(pickup);
+                const end = parseDate(dropoff);
+                if (start && end) {
+                    days = Math.max(1, Math.round((end - start) / MS_PER_DAY));
+                }
+
+                const subtotal = Number(query.get('subtotal')) || days * rate;
+                const insurance = Number(query.get('insurance')) || INSURANCE_FEE;
+                const total = Number(query.get('total')) || subtotal + insurance;
+                const deposit = Math.round(total * 0.3);
+                const remaining = total - deposit;
+                const points = Math.max(1, Math.round(total / 10000));
+
+                const setText = (id, value) => {
+                    const el = document.getElementById(id);
+                    if (el) el.textContent = value;
+                };
+
+                setText('full-amount', formatVnd(total));
+                setText('deposit-amount', formatVnd(deposit));
+                setText('remaining-amount', formatVnd(remaining));
+                setText('reward-points', `Nhận ngay ${points} điểm Kinetic`);
+
+                setText('aside-rental-label', `Giá thuê ${days} ngày`);
+                setText('aside-rental-amount', formatVnd(subtotal));
+                setText('aside-insurance', formatVnd(insurance));
+                setText('aside-total', formatVnd(total));
+
+                const nextQuery = new URLSearchParams({
+                    pickup: pickup || '',
+                    dropoff: dropoff || '',
+                    rate: String(rate),
+                    days: String(days),
+                    subtotal: String(subtotal),
+                    insurance: String(insurance),
+                    total: String(total)
+                }).toString();
+
+                const confirmBtn = document.getElementById('confirm-payment-btn');
+                if (confirmBtn) {
+                    confirmBtn.addEventListener('click', function () {
+                        window.location.href = `xac-nhan-thanh-toan.html?${nextQuery}`;
+                    });
+                }
+            })();
+        </script>
+<script src="router.js"></script>
+</body></html>

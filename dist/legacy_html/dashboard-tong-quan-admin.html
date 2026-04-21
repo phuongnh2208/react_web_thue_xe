@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bảng Quản Trị | Kinetic Concierge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#b3ebff",
+                        "inverse-primary": "#b1c6ff",
+                        "surface-container-low": "#eff4ff",
+                        "surface-variant": "#d3e4fe",
+                        "on-secondary-container": "#6a4800",
+                        "on-tertiary-fixed": "#001f27",
+                        "on-surface-variant": "#444650",
+                        "secondary-fixed-dim": "#ffba35",
+                        "inverse-surface": "#213145",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#00232c",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f8f9ff",
+                        "on-primary-fixed": "#001946",
+                        "outline-variant": "#c4c6d1",
+                        "outline": "#747781",
+                        "tertiary-fixed-dim": "#4cd6fb",
+                        "on-secondary-fixed-variant": "#5f4100",
+                        "on-tertiary-container": "#00abce",
+                        "surface-container-highest": "#d3e4fe",
+                        "secondary": "#7e5700",
+                        "secondary-fixed": "#ffdeac",
+                        "tertiary-container": "#003a47",
+                        "on-tertiary-fixed-variant": "#004e5f",
+                        "on-surface": "#0b1c30",
+                        "secondary-container": "#feb300",
+                        "surface-container": "#e5eeff",
+                        "on-primary-fixed-variant": "#284481",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#12326e",
+                        "on-background": "#0b1c30",
+                        "on-secondary-fixed": "#281900",
+                        "surface-dim": "#cbdbf5",
+                        "surface-tint": "#425d9b",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#b1c6ff",
+                        "background": "#f8f9ff",
+                        "surface": "#f8f9ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-primary-container": "#829cdf",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#dce9ff",
+                        "primary": "#001d4e",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#d9e2ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-slate-50 dark:bg-slate-950 font-['Inter'] text-sm font-medium transition-all duration-300 ease-out z-50">
+<div class="text-lg font-extrabold text-blue-900 dark:text-white px-4 py-6">
+            Bảng Quản Trị
+            <div class="text-[10px] uppercase tracking-[0.2em] font-medium text-slate-400 mt-1">Vận Hành Đội Xe</div>
+</div>
+<div class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 bg-white dark:bg-blue-900/40 text-blue-900 dark:text-amber-400 rounded-l-full ml-4 shadow-sm shadow-blue-900/5 transition-all" href="dashboard-tong-quan-admin.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span>Tổng quan</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:translate-x-1 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all" href="quan-ly-doi-xe.html">
+<span class="material-symbols-outlined">directions_car</span>
+<span>Quản lý đội xe</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:translate-x-1 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all" href="quan-ly-hop-dong-cho-ky-so.html">
+<span class="material-symbols-outlined">receipt_long</span>
+<span>Đơn thuê xe</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:translate-x-1 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all" href="quan-ly-bao-duong.html">
+<span class="material-symbols-outlined">build</span>
+<span>Bảo trì</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:translate-x-1 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all" href="quan-ly-ke-toan-thanh-toan.html">
+<span class="material-symbols-outlined">payments</span>
+<span>Kế toán</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 dark:text-slate-400 hover:translate-x-1 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all" href="quan-ly-nguoi-dung-phan-quyen.html">
+<span class="material-symbols-outlined">manage_accounts</span>
+<span>Phân quyền</span>
+</a>
+</div>
+<div class="p-6">
+<button class="w-full py-3 px-4 bg-secondary-container text-on-secondary-fixed font-bold rounded-xl shadow-lg shadow-secondary/20 hover:scale-95 transition-transform">
+                Tạo đơn thuê mới
+            </button>
+</div>
+<div class="px-4 py-6 border-t border-slate-100 dark:border-slate-800 space-y-1">
+<a class="flex items-center gap-3 px-4 py-2 text-slate-500 dark:text-slate-400 hover:translate-x-1 transition-all" href="trang-chu-khach-hang.html">
+<span class="material-symbols-outlined">settings</span>
+<span>Cài đặt</span>
+</a>
+<button onclick="logout()" class="w-full flex items-center gap-3 px-4 py-2 text-slate-500 dark:text-slate-400 hover:translate-x-1 transition-all">
+<span class="material-symbols-outlined">logout</span>
+<span>Đăng xuất</span>
+</button>
+</div>
+</aside>
+<main class="ml-64 min-h-screen">
+<header class="w-full bg-white/80 dark:bg-blue-950/80 backdrop-blur-xl sticky top-0 z-40">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-4">
+<h1 class="text-2xl font-black text-blue-900 dark:text-amber-500 italic font-headline tracking-tight">Kinetic Concierge</h1>
+<div class="h-6 w-px bg-outline-variant/30"></div>
+<span class="text-on-surface-variant font-medium">Tổng quan Dashboard</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full text-sm focus:ring-2 focus:ring-primary w-64" placeholder="Tìm kiếm hệ thống..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-bold text-primary dark:text-amber-400" id="userName">Marcus Sterling</p>
+<p class="text-xs text-on-surface-variant">Giám đốc Đội xe</p>
+</div>
+<img alt="Staff Profile" class="h-10 w-10 rounded-full border-2 border-primary-container object-cover" data-alt="professional portrait of a male executive in a sharp navy suit against a clean studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZF6eQJfj0mBLfBxtQGn2OVxg7SH9TLLWhH29kHm28ixyG6DZrHkeVp8dp9m6LqyTkQ_2igVW2PbEIkylLG7ZqFtBtZ3zfV3AQ4OOK1N3F-BKAeRd1QLRdUb_6i2WCc7coRbYJY6boeShQPC9F1GGtE_EoioTO1HAjokP3wefk3flR5hTCdaSgsit1iy1BrnAPapuUoSGvFiR1cK-oYgQ-0E61y3LS-_Vl4d0mjsKRblvr5SZT1YuYuegPGfJ8libS3WztDjc6aSI"/>
+</div>
+</div>
+</div>
+</header>
+<section class="p-8 max-w-screen-2xl mx-auto space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-surface-container-low rounded-lg text-primary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="text-tertiary font-bold text-xs bg-tertiary-fixed px-2 py-1 rounded-full">+12.5%</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium">Tổng doanh thu</p>
+<h3 class="text-2xl font-extrabold text-on-surface mt-1">12.150.000.000 VNĐ</h3>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-surface-container-low rounded-lg text-primary">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<span class="text-tertiary font-bold text-xs bg-tertiary-fixed px-2 py-1 rounded-full">+4.2%</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium">Tổng đơn hàng</p>
+<h3 class="text-2xl font-extrabold text-on-surface mt-1">1,284</h3>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-surface-container-low rounded-lg text-primary">
+<span class="material-symbols-outlined">directions_car</span>
+</div>
+<span class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">Đội xe hoạt động</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium">Tỷ lệ khai thác</p>
+<h3 class="text-2xl font-extrabold text-on-surface mt-1">88.4%</h3>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-start mb-4">
+<div class="p-3 bg-surface-container-low rounded-lg text-error">
+<span class="material-symbols-outlined">build</span>
+</div>
+<span class="text-on-error-container font-bold text-xs bg-error-container px-2 py-1 rounded-full">Cần xử lý</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium">Chờ bảo trì</p>
+<h3 class="text-2xl font-extrabold text-on-surface mt-1">12 Phương tiện</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl p-8 shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h2 class="text-xl font-bold text-primary">Xu hướng Doanh thu</h2>
+<p class="text-on-surface-variant text-sm">Hiệu suất hàng tháng trên tất cả các phân khúc</p>
+</div>
+<select class="bg-surface-container-low border-none rounded-lg text-xs font-bold text-primary-container focus:ring-0">
+<option>6 tháng qua</option>
+<option>Năm qua</option>
+</select>
+</div>
+<div class="h-64 flex items-end justify-between gap-2 px-4 relative">
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none">
+<div class="border-t border-outline-variant/10 w-full"></div>
+<div class="border-t border-outline-variant/10 w-full"></div>
+<div class="border-t border-outline-variant/10 w-full"></div>
+<div class="border-t border-outline-variant/10 w-full"></div>
+</div>
+<div class="flex flex-col items-center gap-2 group z-10">
+<div class="w-12 bg-primary-container rounded-t-lg transition-all group-hover:bg-primary" style="height: 60%"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">T01</span>
+</div>
+<div class="flex flex-col items-center gap-2 group z-10">
+<div class="w-12 bg-primary-container rounded-t-lg transition-all group-hover:bg-primary" style="height: 75%"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">T02</span>
+</div>
+<div class="flex flex-col items-center gap-2 group z-10">
+<div class="w-12 bg-primary-container rounded-t-lg transition-all group-hover:bg-primary" style="height: 65%"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">T03</span>
+</div>
+<div class="flex flex-col items-center gap-2 group z-10">
+<div class="w-12 bg-secondary-container rounded-t-lg transition-all group-hover:scale-110" style="height: 90%"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">T04</span>
+</div>
+<div class="flex flex-col items-center gap-2 group z-10">
+<div class="w-12 bg-primary-container rounded-t-lg transition-all group-hover:bg-primary" style="height: 80%"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">T05</span>
+</div>
+<div class="flex flex-col items-center gap-2 group z-10">
+<div class="w-12 bg-primary-container rounded-t-lg transition-all group-hover:bg-primary" style="height: 70%"></div>
+<span class="text-[10px] font-bold text-on-surface-variant">T06</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm border border-outline-variant/10">
+<h2 class="text-xl font-bold text-primary mb-2">Trạng thái Xe</h2>
+<p class="text-on-surface-variant text-sm mb-8">Phân bổ đội xe trực tiếp</p>
+<div class="relative h-48 w-48 mx-auto mb-8">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="100, 100" stroke-width="3"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="60, 100" stroke-width="4"></path>
+<path class="text-secondary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="25, 100" stroke-dashoffset="-60" stroke-width="4"></path>
+<path class="text-tertiary-fixed-dim" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="15, 100" stroke-dashoffset="-85" stroke-width="4"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center flex-col">
+<span class="text-3xl font-black text-primary">850</span>
+<span class="text-[10px] font-bold text-on-surface-variant tracking-widest uppercase text-center">Tổng đơn vị</span>
+</div>
+</div>
+<ul class="space-y-4">
+<li class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-sm font-medium text-on-surface-variant">Đang chạy</span>
+</div>
+<span class="text-sm font-bold text-primary">60%</span>
+</li>
+<li class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="text-sm font-medium text-on-surface-variant">Sẵn sàng</span>
+</div>
+<span class="text-sm font-bold text-primary">25%</span>
+</li>
+<li class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="text-sm font-medium text-on-surface-variant">Bảo trì</span>
+</div>
+<span class="text-sm font-bold text-primary">15%</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10 overflow-hidden">
+<div class="px-8 py-6 flex justify-between items-center bg-surface-container-low/30">
+<h2 class="text-xl font-bold text-primary">Hoạt động Đội xe gần đây</h2>
+<button class="text-primary font-bold text-sm hover:underline underline-offset-4">Xuất CSV</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-[10px] font-black uppercase tracking-widest text-on-surface-variant bg-surface-container-low/50">
+<th class="px-8 py-4">Phương tiện</th>
+<th class="px-8 py-4">Khách hàng</th>
+<th class="px-8 py-4">Vị trí</th>
+<th class="px-8 py-4">Thời gian</th>
+<th class="px-8 py-4">Doanh thu</th>
+<th class="px-8 py-4 text-right">Trạng thái</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-slate-100 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="side profile of a sleek electric high-end luxury vehicle in a minimalist showroom environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7Mb7ehl_TiDk0rPHjoho8lj200oFrIsta9zCPsPvnW4W0NLP5kwX_av0Ry3jgYwCHHN4fSffSJkTNzljb-HiFiMhW4NjQtabwHucHWBv8YbhH2Mdn2gx2NayLmyM45UUmjFeTLWg0Wu1uBEln2ZYbfV9SnwOQ3WaMHpTA8bD3lckPAF9j8JREpUFxkpp6cMARFjM22C0AoqG9PV6ThQl3FPVB4g21FZK23DSuoCVZ48e5c1BiEUk-5HaNf0RxnmlXutIlQL_bScg"/>
+</div>
+<div>
+<p class="font-bold text-primary text-sm">Lucid Air Dream</p>
+<p class="text-xs text-on-surface-variant">K-CON-042</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-4">
+<p class="text-sm font-medium text-primary">Nguyễn Văn An</p>
+<p class="text-xs text-on-surface-variant">Thành viên Vàng</p>
+</td>
+<td class="px-8 py-4">
+<div class="flex items-center gap-1 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                        Marina Bay
+                                    </div>
+</td>
+<td class="px-8 py-4 text-sm text-on-surface-variant">4 Ngày</td>
+<td class="px-8 py-4 font-bold text-primary">31.000.000 VNĐ</td>
+<td class="px-8 py-4 text-right">
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-black uppercase rounded-full">Hoạt động</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-slate-100 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="front view of a modern matte black motorcycle with neon accents parked in a futuristic urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrHkxurAZPhMr6ZqZp8mGjF0BJqpscptH8jn43vfgz7NEckWR7pw0eoGIiSqqLvWLytWdJWXyLF9IhDYWudlcDyedawL23qtbDA0ONJAPPjdy_aR6pDVAXRALxnaCqaz2hFb_OfmgZkByDAVoiBnTIV00l7mJ3LODBVvX5Libve1lZt8vASrbNr70ZmQjWUuz2Qdn3XZX7DIdERJxM4irEdyOYok9Q9HWA7ZOav0eRVeY1MKFCDGlBzeEqueNqzk_xsjEOlAyZxB4"/>
+</div>
+<div>
+<p class="font-bold text-primary text-sm">Ducati Panigale V4</p>
+<p class="text-xs text-on-surface-variant">K-MOTO-118</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-4">
+<p class="text-sm font-medium text-primary">Trần Thị Chi</p>
+<p class="text-xs text-on-surface-variant">Người dùng Thường</p>
+</td>
+<td class="px-8 py-4">
+<div class="flex items-center gap-1 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                        Trạm Trung tâm
+                                    </div>
+</td>
+<td class="px-8 py-4 text-sm text-on-surface-variant">2 Ngày</td>
+<td class="px-8 py-4 font-bold text-primary">11.250.000 VNĐ</td>
+<td class="px-8 py-4 text-right">
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed-variant text-[10px] font-black uppercase rounded-full">Hoàn tất</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/20 transition-colors">
+<td class="px-8 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-slate-100 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="rear view of a classic white sports car driving along a coastal highway at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlmVpvLhdOZcEHRBUyriuYgHiPTgp_Z5moegDtrT5_cKiQqPKU_r1M90NEi7DivGZQBWt-QsTuq0ZYCItb7RS_i0nMjRjY5fCVpZT6zt8KHgJGxdgZ0PRr6Dl7t-eyPRmJIxxcwZsS7PjCkeRaJK9WR7DznwmIQewkEQw3jyqMpZJZE6fTqbu0QNT7vJLhZFiOy_3rYzXJdJn4h778glKqSWbxQ0o_EASeDe5sQjudbmoxXsfbqpRStHxxyXmz_CxlQ_2r1m_B2Wo"/>
+</div>
+<div>
+<p class="font-bold text-primary text-sm">Porsche 911 GT3</p>
+<p class="text-xs text-on-surface-variant">K-CON-911</p>
+</div>
+</div>
+</td>
+<td class="px-8 py-4">
+<p class="text-sm font-medium text-primary">Lê Hoàng Nam</p>
+<p class="text-xs text-on-surface-variant">Thành viên Bạch kim</p>
+</td>
+<td class="px-8 py-4">
+<div class="flex items-center gap-1 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-xs">location_on</span>
+                                        Ga Sân bay
+                                    </div>
+</td>
+<td class="px-8 py-4 text-sm text-on-surface-variant">7 Ngày</td>
+<td class="px-8 py-4 font-bold text-primary">70.000.000 VNĐ</td>
+<td class="px-8 py-4 text-right">
+<span class="px-3 py-1 bg-error-container text-on-error-container text-[10px] font-black uppercase rounded-full">Bảo trì</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</main>
+<footer class="ml-64 w-auto py-12 px-8 bg-blue-900 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-screen-2xl mx-auto">
+<p class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500">© 2024 Kinetic Concierge. Chuyển động Chính xác.</p>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500 hover:text-amber-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="trang-chu-khach-hang.html">Chính sách Bảo mật</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500 hover:text-amber-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="trang-chu-khach-hang.html">Điều khoản Dịch vụ</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-blue-200/60 dark:text-slate-500 hover:text-amber-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="trang-chu-khach-hang.html">Liên hệ</a>
+</div>
+</div>
+</footer>
+<script>
+    // Check if user is logged in and has admin role
+    window.addEventListener('load', function() {
+        const loggedIn = localStorage.getItem('kc_user_logged_in');
+        const userType = localStorage.getItem('kc_user_type');
+        
+        if (loggedIn !== 'true') {
+            window.location.href = 'login.html';
+            return;
+        }
+        
+        if (userType !== 'admin') {
+            alert('Bạn không có quyền truy cập trang này. Chỉ admin mới có thể truy cập.');
+            window.location.href = 'login.html';
+            return;
+        }
+        
+        // Load user info
+        const userName = localStorage.getItem('kc_user_name');
+        if (userName) {
+            document.getElementById('userName').textContent = userName;
+        }
+    });
+
+    function logout() {
+        localStorage.removeItem('kc_user_logged_in');
+        localStorage.removeItem('kc_user_username');
+        localStorage.removeItem('kc_user_role');
+        localStorage.removeItem('kc_user_name');
+        localStorage.removeItem('kc_user_title');
+        localStorage.removeItem('kc_user_type');
+        window.location.href = 'login.html';
+    }
+</script>
+<script src="router.js"></script>
+</body></html>

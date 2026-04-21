@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập | Kinetic Concierge</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#001d4e",
+                        "primary-container": "#12326e",
+                        secondary: "#7e5700",
+                        "secondary-container": "#feb300",
+                        error: "#ba1a1a",
+                    },
+                    fontFamily: {
+                        headline: ["Plus Jakarta Sans"],
+                        body: ["Inter"],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-primary via-primary-container to-blue-900 min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md">
+        <!-- Logo & Title -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-black text-white italic font-headline tracking-tight mb-2">Kinetic Concierge</h1>
+            <p class="text-blue-200">Hệ thống quản lý đội xe cho thuê</p>
+        </div>
+
+        <!-- Login Form -->
+        <div class="bg-white rounded-2xl shadow-2xl p-8 mb-6">
+            <h2 class="text-2xl font-bold text-primary mb-8 text-center">Đăng Nhập</h2>
+            
+            <form id="loginForm" class="space-y-6">
+                <!-- Username Input -->
+                <div>
+                    <label class="block text-sm font-semibold text-primary mb-2">Tên đăng nhập</label>
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary">person</span>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            placeholder="admin, nvbd, nvkt, nvtx"
+                            class="w-full pl-10 pr-4 py-3 border-2 border-primary/20 rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition"
+                        >
+                    </div>
+                    <p class="text-xs text-gray-500 mt-1">Mặc định: admin, nvbd, nvkt, nvtx</p>
+                </div>
+
+                <!-- Password Input -->
+                <div>
+                    <label class="block text-sm font-semibold text-primary mb-2">Mật khẩu</label>
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-primary">lock</span>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            placeholder="Nhập mật khẩu"
+                            class="w-full pl-10 pr-4 py-3 border-2 border-primary/20 rounded-lg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition"
+                        >
+                    </div>
+                    <p class="text-xs text-gray-500 mt-1">Mật khẩu mặc định: 123</p>
+                </div>
+
+                <!-- Error Message -->
+                <div id="errorMessage" class="hidden p-4 bg-red-50 border border-red-200 rounded-lg text-red-600 text-sm flex items-start gap-2">
+                    <span class="material-symbols-outlined text-lg">error</span>
+                    <span id="errorText"></span>
+                </div>
+
+                <!-- Login Button -->
+                <button 
+                    type="submit"
+                    class="w-full bg-gradient-to-r from-primary to-primary-container text-white font-bold py-3 rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200"
+                >
+                    <span class="flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined">login</span>
+                        Đăng Nhập
+                    </span>
+                </button>
+            </form>
+
+            <!-- Demo Accounts Info -->
+            <div class="mt-8 pt-8 border-t border-gray-200">
+                <p class="text-sm font-semibold text-primary mb-4">Tài khoản Demo:</p>
+                <div class="space-y-2 text-xs text-gray-600">
+                    <div class="flex justify-between">
+                        <span class="font-medium">Admin:</span>
+                        <span>admin / 123</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-medium">Bảo Dưỡng:</span>
+                        <span>nvbd / 123</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-medium">Kế Toán:</span>
+                        <span>nvkt / 123</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-medium">Cho Thuê Xe:</span>
+                        <span>nvtx / 123</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <p class="text-center text-blue-200 text-xs">© 2026 Kinetic Concierge. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Dummy credentials database
+        const credentials = {
+            admin: { password: '123', role: 'admin', name: 'Admin', title: 'Quản trị viên hệ thống', redirect: 'dashboard-tong-quan-admin.html' },
+            nvbd: { password: '123', role: 'staff', name: 'Nhân viên bảo dưỡng', title: 'Quản lý bảo trì', redirect: 'dashboard-nhan-vien-bao-duong.html' },
+            nvkt: { password: '123', role: 'staff', name: 'Nhân viên kế toán', title: 'Quản lý kế toán', redirect: 'dashboard-nhan-vien-ke-toan.html' },
+            nvtx: { password: '123', role: 'staff', name: 'Nhân viên cho thuê xe', title: 'Quản lý hợp đồng', redirect: 'dashboard-nhan-vien-cho-thue-xe.html' }
+        };
+
+        const loginForm = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('errorMessage');
+        const errorText = document.getElementById('errorText');
+
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+
+            // Hide error message initially
+            errorMessage.classList.add('hidden');
+
+            // Validate inputs
+            if (!username || !password) {
+                showError('Vui lòng nhập tên đăng nhập và mật khẩu');
+                return;
+            }
+
+            // Check credentials
+            if (!credentials[username]) {
+                showError('Tên đăng nhập không tồn tại');
+                return;
+            }
+
+            if (credentials[username].password !== password) {
+                showError('Mật khẩu không chính xác');
+                return;
+            }
+
+            // Login successful
+            const user = credentials[username];
+            
+            // Store user info in localStorage
+            localStorage.setItem('kc_user_logged_in', 'true');
+            localStorage.setItem('kc_user_username', username);
+            localStorage.setItem('kc_user_role', user.role);
+            localStorage.setItem('kc_user_name', user.name);
+            localStorage.setItem('kc_user_title', user.title);
+            localStorage.setItem('kc_user_type', username); // Store the type for specific dashboards
+
+            // Redirect to appropriate dashboard
+            window.location.href = user.redirect;
+        });
+
+        function showError(message) {
+            errorText.textContent = message;
+            errorMessage.classList.remove('hidden');
+        }
+
+        // Check if already logged in
+        window.addEventListener('load', function() {
+            if (localStorage.getItem('kc_user_logged_in') === 'true') {
+                // Redirect to appropriate dashboard
+                const userType = localStorage.getItem('kc_user_type');
+                if (userType === 'admin') {
+                    window.location.href = 'dashboard-tong-quan-admin.html';
+                } else if (userType === 'nvbd') {
+                    window.location.href = 'dashboard-nhan-vien-bao-duong.html';
+                } else if (userType === 'nvkt') {
+                    window.location.href = 'dashboard-nhan-vien-ke-toan.html';
+                } else if (userType === 'nvtx') {
+                    window.location.href = 'dashboard-nhan-vien-cho-thue-xe.html';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

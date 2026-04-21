@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;family=Public+Sans:wght@400;500;700&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"tertiary-fixed": "#b3ebff", "inverse-primary": "#b1c6ff", "surface-container-low": "#eff4ff", "surface-variant": "#d3e4fe", "on-secondary-container": "#6a4800", "on-tertiary-fixed": "#001f27", "on-surface-variant": "#444650", "secondary-fixed-dim": "#ffba35", "inverse-surface": "#213145", "on-tertiary": "#ffffff", "on-primary": "#ffffff", tertiary: "#00232c", "error-container": "#ffdad6", "surface-bright": "#f8f9ff", "on-primary-fixed": "#001946", "outline-variant": "#c4c6d1", outline: "#747781", "tertiary-fixed-dim": "#4cd6fb", "on-secondary-fixed-variant": "#5f4100", "on-tertiary-container": "#00abce", "surface-container-highest": "#d3e4fe", secondary: "#7e5700", "secondary-fixed": "#ffdeac", "tertiary-container": "#003a47", "on-tertiary-fixed-variant": "#004e5f", "on-surface": "#0b1c30", "secondary-container": "#feb300", "surface-container": "#e5eeff", "on-primary-fixed-variant": "#284481", "on-error-container": "#93000a", "primary-container": "#12326e", "on-background": "#0b1c30", "on-secondary-fixed": "#281900", "surface-dim": "#cbdbf5", "surface-tint": "#425d9b", error: "#ba1a1a", "primary-fixed-dim": "#b1c6ff", background: "#f8f9ff", surface: "#f8f9ff", "inverse-on-surface": "#eaf1ff", "on-primary-container": "#829cdf", "surface-container-lowest": "#ffffff", "surface-container-high": "#dce9ff", primary: "#001d4e", "on-error": "#ffffff", "on-secondary": "#ffffff", "primary-fixed": "#d9e2ff"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, fontFamily: {headline: ["Be Vietnam Pro"], body: ["Public Sans"], label: ["Inter"], display: "Be Vietnam Pro"}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<aside class="h-screen w-64 fixed left-0 top-0 flex flex-col bg-slate-50 dark:bg-slate-950 font-['Inter'] text-sm font-medium transition-all duration-300 ease-out border-r-0 z-50">
+<div class="text-lg font-extrabold text-blue-900 dark:text-white px-4 py-6">
+            Bảng Điều Khiển
+            <div class="text-[10px] uppercase tracking-widest text-slate-400 font-normal">Nhân viên cho thuê xe</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-6 py-3 space-x-3 text-slate-500 hover:bg-blue-50 transition-transform hover:translate-x-1" href="dashboard-nhan-vien-cho-thue-xe.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Tổng quan</span>
+</a>
+<a class="flex items-center px-6 py-3 space-x-3 text-slate-500 hover:bg-blue-50 transition-transform hover:translate-x-1" href="quan-ly-hop-dong-cho-ky-so.html">
+<span class="material-symbols-outlined">receipt_long</span>
+<span>Hợp đồng & Lịch sử</span>
+</a>
+<a class="flex items-center px-6 py-3 space-x-3 bg-white text-blue-900 rounded-l-full ml-4 shadow-sm shadow-blue-900/5 transition-all duration-300 ease-out" href="danh-sach-xe.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">directions_car</span>
+<span class="font-bold">Danh sách xe cho thuê</span>
+</a>
+</nav>
+<div class="p-4 space-y-1 mt-auto bg-slate-100 dark:bg-slate-900">
+<button class="w-full flex items-center px-4 py-3 space-x-3 text-slate-500 hover:bg-white rounded-lg transition-all">
+<span class="material-symbols-outlined">settings</span>
+<span>Cài đặt</span>
+</button>
+<button onclick="logout()" class="w-full flex items-center px-4 py-3 space-x-3 text-slate-500 hover:bg-white rounded-lg transition-all">
+<span class="material-symbols-outlined">logout</span>
+<span>Đăng xuất</span>
+</button>
+</div>
+</aside>
+
+<main class="ml-64 px-8 py-12 space-y-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="text-3xl font-headline font-extrabold text-primary tracking-tight">Bảng xe đang được thuê</h1>
+<p class="text-on-surface-variant text-sm font-medium mt-2">Theo dõi xe đang hoạt động và thông tin người thuê theo thời gian thực.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 rounded-lg bg-surface-container-low text-primary font-bold text-sm">Đang thuê: 12 xe</button>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-bold text-sm">Làm mới</button>
+</div>
+</div>
+
+<div class="bg-surface-container-low rounded-xl p-4 md:p-5 flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-white border-0 rounded-xl pl-10 pr-4 py-3 text-sm focus:ring-2 focus:ring-primary/20" placeholder="Tìm biển số hoặc tên người thuê" type="text"/>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-3 bg-white rounded-xl text-sm font-semibold text-on-surface-variant">Hôm nay</button>
+<button class="px-4 py-3 bg-white rounded-xl text-sm font-semibold text-on-surface-variant">7 ngày</button>
+<button class="px-4 py-3 bg-secondary-container text-on-secondary-container rounded-xl text-sm font-bold">Toàn bộ</button>
+</div>
+</div>
+
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/10 shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low/50">
+<tr class="text-[11px] font-black uppercase tracking-widest text-on-surface-variant">
+<th class="px-6 py-4">Biển số</th>
+<th class="px-6 py-4">Xe</th>
+<th class="px-6 py-4">Người thuê</th>
+<th class="px-6 py-4">SĐT</th>
+<th class="px-6 py-4">Ngày thuê</th>
+<th class="px-6 py-4">Ngày trả dự kiến</th>
+<th class="px-6 py-4 text-right">Trạng thái</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10 text-sm">
+<tr class="hover:bg-surface-container-low/30 transition-all">
+<td class="px-6 py-4 font-bold text-primary">51A-123.45</td>
+<td class="px-6 py-4 text-on-surface">BMW iX M60</td>
+<td class="px-6 py-4 text-on-surface">Alexander Vance</td>
+<td class="px-6 py-4 text-on-surface-variant">0901 234 567</td>
+<td class="px-6 py-4 text-on-surface-variant">2026-04-18</td>
+<td class="px-6 py-4 text-on-surface-variant">2026-04-23</td>
+<td class="px-6 py-4 text-right"><span class="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-700">Đang thuê</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-all">
+<td class="px-6 py-4 font-bold text-primary">29A-888.88</td>
+<td class="px-6 py-4 text-on-surface">Audi e-tron GT</td>
+<td class="px-6 py-4 text-on-surface">Sarah Jenkins</td>
+<td class="px-6 py-4 text-on-surface-variant">0988 456 222</td>
+<td class="px-6 py-4 text-on-surface-variant">2026-04-19</td>
+<td class="px-6 py-4 text-on-surface-variant">2026-04-24</td>
+<td class="px-6 py-4 text-right"><span class="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-700">Đang thuê</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-all">
+<td class="px-6 py-4 font-bold text-primary">51G-999.99</td>
+<td class="px-6 py-4 text-on-surface">Porsche 911 Turbo</td>
+<td class="px-6 py-4 text-on-surface">David Miller</td>
+<td class="px-6 py-4 text-on-surface-variant">0933 111 009</td>
+<td class="px-6 py-4 text-on-surface-variant">2026-04-17</td>
+<td class="px-6 py-4 text-on-surface-variant">2026-04-21</td>
+<td class="px-6 py-4 text-right"><span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-700">Sắp hết hạn</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-all">
+<td class="px-6 py-4 font-bold text-primary">30H-441.08</td>
+<td class="px-6 py-4 text-on-surface">Tesla Model Y</td>
+<td class="px-6 py-4 text-on-surface">Nguyễn Văn An</td>
+<td class="px-6 py-4 text-on-surface-variant">0912 888 741</td>
+<td class="px-6 py-4 text-on-surface-variant">2026-04-20</td>
+<td class="px-6 py-4 text-on-surface-variant">2026-04-25</td>
+<td class="px-6 py-4 text-right"><span class="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-700">Đang thuê</span></td>
+</tr>
+<tr class="hover:bg-surface-container-low/30 transition-all">
+<td class="px-6 py-4 font-bold text-primary">59B-902.11</td>
+<td class="px-6 py-4 text-on-surface">Triumph Bonneville T120</td>
+<td class="px-6 py-4 text-on-surface">Trần Thị Chi</td>
+<td class="px-6 py-4 text-on-surface-variant">0977 400 201</td>
+<td class="px-6 py-4 text-on-surface-variant">2026-04-16</td>
+<td class="px-6 py-4 text-on-surface-variant">2026-04-22</td>
+<td class="px-6 py-4 text-right"><span class="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-700">Đang thuê</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+<footer class="ml-64 bg-blue-900 dark:bg-slate-950 w-auto py-12 px-8 mt-24">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-amber-500 font-headline text-xs uppercase tracking-widest">
+                © 2024 Kinetic Concierge. Sự chính xác trong từng chuyển động.
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-blue-200/60 dark:text-slate-500 font-headline text-xs uppercase tracking-widest hover:text-amber-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="trang-chu-khach-hang.html">Chính sách bảo mật</a>
+<a class="text-blue-200/60 dark:text-slate-500 font-headline text-xs uppercase tracking-widest hover:text-amber-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="trang-chu-khach-hang.html">Điều khoản dịch vụ</a>
+<a class="text-blue-200/60 dark:text-slate-500 font-headline text-xs uppercase tracking-widest hover:text-amber-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="trang-chu-khach-hang.html">Thỏa thuận thuê xe</a>
+<a class="text-blue-200/60 dark:text-slate-500 font-headline text-xs uppercase tracking-widest hover:text-amber-400 underline underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="trang-chu-khach-hang.html">Liên hệ</a>
+</div>
+</div>
+</footer>
+<script>
+    window.addEventListener('load', function() {
+        const loggedIn = localStorage.getItem('kc_user_logged_in');
+        const userType = localStorage.getItem('kc_user_type');
+
+        if (loggedIn !== 'true') {
+            window.location.href = 'login.html';
+            return;
+        }
+
+        if (userType !== 'nvtx') {
+            alert('Bạn không có quyền truy cập trang này');
+            window.location.href = 'login.html';
+        }
+    });
+
+    function logout() {
+        localStorage.removeItem('kc_user_logged_in');
+        localStorage.removeItem('kc_user_username');
+        localStorage.removeItem('kc_user_role');
+        localStorage.removeItem('kc_user_name');
+        localStorage.removeItem('kc_user_title');
+        localStorage.removeItem('kc_user_type');
+        window.location.href = 'login.html';
+    }
+</script>
+<script src="router.js"></script>
+</body></html>
